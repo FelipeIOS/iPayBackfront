@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" rowHeight="105" id="KGk-i7-Jjw" customClass="TableViewCell" customModule="iPayBF" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="105"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="480" height="105"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E76-VS-7aJ">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="100"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image-1" translatesAutoresizingMaskIntoConstraints="NO" id="ESs-Qf-rmb">
+                                <rect key="frame" x="10" y="10" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="ddj-Ow-xVT"/>
+                                    <constraint firstAttribute="height" constant="80" id="sQ0-ef-ZGt"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="credit-card" translatesAutoresizingMaskIntoConstraints="NO" id="DRZ-QA-Hw0">
+                                <rect key="frame" x="390" y="10" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="ntZ-kr-ED0"/>
+                                    <constraint firstAttribute="width" constant="80" id="xB1-Je-NUc"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGE-DB-jVl">
+                                <rect key="frame" x="100" y="36.5" width="280" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="DRZ-QA-Hw0" secondAttribute="trailing" constant="10" id="6pD-7z-yLQ"/>
+                            <constraint firstItem="DRZ-QA-Hw0" firstAttribute="top" secondItem="E76-VS-7aJ" secondAttribute="top" constant="10" id="9Vh-Tu-X1x"/>
+                            <constraint firstItem="ESs-Qf-rmb" firstAttribute="leading" secondItem="E76-VS-7aJ" secondAttribute="leading" constant="10" id="9jW-1F-iH8"/>
+                            <constraint firstAttribute="bottom" secondItem="DRZ-QA-Hw0" secondAttribute="bottom" constant="10" id="Jiw-bH-ZGk"/>
+                            <constraint firstItem="DRZ-QA-Hw0" firstAttribute="leading" secondItem="hGE-DB-jVl" secondAttribute="trailing" constant="10" id="NFI-Xt-Gon"/>
+                            <constraint firstAttribute="bottom" secondItem="ESs-Qf-rmb" secondAttribute="bottom" constant="10" id="dUG-GK-oQB"/>
+                            <constraint firstItem="hGE-DB-jVl" firstAttribute="centerY" secondItem="E76-VS-7aJ" secondAttribute="centerY" id="eVK-Da-vgp"/>
+                            <constraint firstAttribute="height" constant="100" id="fnK-mT-k2e"/>
+                            <constraint firstItem="hGE-DB-jVl" firstAttribute="leading" secondItem="ESs-Qf-rmb" secondAttribute="trailing" constant="10" id="i2f-oG-dGL"/>
+                            <constraint firstItem="ESs-Qf-rmb" firstAttribute="top" secondItem="E76-VS-7aJ" secondAttribute="top" constant="10" id="jiP-mA-2ot"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="E76-VS-7aJ" secondAttribute="trailing" id="OQf-zE-mhP"/>
+                    <constraint firstItem="E76-VS-7aJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="QYn-mN-RPb"/>
+                    <constraint firstAttribute="bottom" secondItem="E76-VS-7aJ" secondAttribute="bottom" id="h8s-ix-r1G"/>
+                    <constraint firstItem="E76-VS-7aJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="mJq-wH-YV8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cardImageView" destination="DRZ-QA-Hw0" id="v4U-su-cY6"/>
+                <outlet property="nameLabel" destination="hGE-DB-jVl" id="b9R-CD-LHv"/>
+                <outlet property="personImageView" destination="ESs-Qf-rmb" id="Ch3-hR-uNw"/>
+            </connections>
+            <point key="canvasLocation" x="102.89855072463769" y="-74.665178571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Image-1" width="512" height="512"/>
+        <image name="credit-card" width="128" height="128"/>
+    </resources>
+</document>
