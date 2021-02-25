@@ -29,7 +29,7 @@
                                 <rect key="frame" x="0.0" y="361" width="414" height="535"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="101" id="WuC-dl-Qmf">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" rowHeight="101" id="WuC-dl-Qmf" customClass="UserCell" customModule="iPayBF" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="101"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WuC-dl-Qmf" id="h6a-Tv-eIT" customClass="UserCell" customModule="iPayBF" customModuleProvider="target">
@@ -70,6 +70,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="cardImageView" destination="j9d-nl-DSG" id="eVQ-iW-aUG"/>
+                                            <outlet property="nameLabel" destination="AB1-iR-bVO" id="m5C-s2-fyG"/>
+                                            <outlet property="userImageView" destination="mER-Fa-pVK" id="R3Y-1x-H2U"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
