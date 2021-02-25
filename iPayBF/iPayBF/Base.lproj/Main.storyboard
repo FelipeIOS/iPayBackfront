@@ -20,10 +20,10 @@
                                 <rect key="frame" x="0.0" y="409" width="414" height="453"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" rowHeight="97" id="M8h-Vi-NPr">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" rowHeight="97" id="M8h-Vi-NPr" customClass="UserCell" customModule="iPayBF" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="97"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="M8h-Vi-NPr" id="7a6-dW-Q07">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="M8h-Vi-NPr" id="7a6-dW-Q07" customClass="UserCell" customModule="iPayBF" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="97"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -60,6 +60,11 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="XFT-qG-UNA" secondAttribute="bottom" constant="5" id="rXV-DA-SFy"/>
                                                 <constraint firstItem="XFT-qG-UNA" firstAttribute="leading" secondItem="7a6-dW-Q07" secondAttribute="leadingMargin" constant="5" id="uoy-xY-1fu"/>
                                             </constraints>
+                                            <connections>
+                                                <outlet property="cardImageView" destination="YXU-uG-iny" id="ebT-sN-wq5"/>
+                                                <outlet property="nameLabel" destination="arl-fl-WQt" id="8of-fb-BLS"/>
+                                                <outlet property="userImageView" destination="XFT-qG-UNA" id="KMz-Je-iDq"/>
+                                            </connections>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>

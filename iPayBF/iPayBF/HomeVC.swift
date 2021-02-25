@@ -7,17 +7,6 @@
 
 import UIKit
 
-class User {
-    
-    var name:String
-    var imageName:String
-    
-    init(name:String, imageName:String) {
-        self.name = name
-        self.imageName = imageName
-    }
-}
-
 class HomeVC: UIViewController {
     
     var arrayNameImage:[String] = ["Image-1", "Image-2", "Image-3", "Image-4", "Image-5"]
@@ -30,7 +19,6 @@ class HomeVC: UIViewController {
     @IBOutlet weak var sortButton: UIButton!
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.nameTextField.delegate = self
@@ -41,12 +29,16 @@ class HomeVC: UIViewController {
     
 
     @IBAction func tappedSortButton(_ sender: UIButton) {
+        
+        
     }
 
     
 }
 
 extension HomeVC: UITextFieldDelegate {
+    
+    
     
 }
 

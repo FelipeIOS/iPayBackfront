@@ -9,8 +9,6 @@ import UIKit
 
 class UserCell: UITableViewCell {
     
-    let identifier:String = "UserCell"
-    
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var cardImageView: UIImageView!
@@ -20,8 +18,13 @@ class UserCell: UITableViewCell {
         super.awakeFromNib()
      
     }
-
-
     
+    func setup(value: User?) {
+        
+        if let _value = value {
+            self.nameLabel.text = _value.name
+            self.userImageView.image = UIImage(named: _value.imageName)
+        }
+    }
 
 }
