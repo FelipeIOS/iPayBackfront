@@ -18,14 +18,28 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.arrayUser.append(User(name: "Felipe", imageName: self.arrayNameImages.first ?? ""))
+
         
         self.usersTableView.dataSource = self
         self.usersTableView.delegate = self
         self.nameTextField.delegate = self
-    
-        // Do any additional setup after loading the view.
+        
+        self.blockedSortButton()
+        
+        
+     
     }
+    private func blockedSortButton() {
+        
+            if self.controller.blockedSortButton() {
+                self.sortButton.isUserInteractionEnabled = false
+                self.sortButton.alpha = 0.5
+            }else{
+                self.sortButton.isUserInteractionEnabled = true
+                self.sortButton.alpha = 1.0
+            }
+        }
+        
 
     @IBAction func tappedSortButton(_ sender: UIButton) {
     
@@ -42,6 +56,8 @@ extension HomeVC: UITextFieldDelegate {
         self.controller.addUser(name: textField.text)
         textField.text = nil
 
+        self.blockedSortButton()
+        
         self.usersTableView.reloadData()
         
         return true
