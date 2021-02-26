@@ -85,12 +85,12 @@
 		B2F7FFCB25E473260038370E /* iPayBF */ = {
 			isa = PBXGroup;
 			children = (
+				D3E5032F25E9B0EE00F933FC /* AppDelegate.swift */,
+				D3E5033025E9B0EE00F933FC /* SceneDelegate.swift */,
 				B2F7005F25E721990038370E /* View */,
 				B2F7005E25E721930038370E /* Controller */,
 				B2F7005925E721400038370E /* Model */,
 				B2F7FFD025E473260038370E /* HomeVC.swift */,
-				D3E5032F25E9B0EE00F933FC /* AppDelegate.swift */,
-				D3E5033025E9B0EE00F933FC /* SceneDelegate.swift */,
 				B2F7005625E70D4F0038370E /* UserCell.swift */,
 				B2F7FFD225E473260038370E /* Main.storyboard */,
 				B2F7FFD525E473280038370E /* Assets.xcassets */,
