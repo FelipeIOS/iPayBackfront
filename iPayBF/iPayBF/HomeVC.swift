@@ -1,9 +1,4 @@
-//
-//  ViewController.swift
-//  iPayBF
-//
-//  Created by Felipe Miranda on 22/02/21.
-//
+
 
 import UIKit
 
@@ -18,7 +13,7 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         
         self.usersTableView.dataSource = self
         self.usersTableView.delegate = self
@@ -27,22 +22,22 @@ class HomeVC: UIViewController {
         self.blockedSortButton()
         
         
-     
+        
     }
     private func blockedSortButton() {
         
-            if self.controller.blockedSortButton() {
-                self.sortButton.isUserInteractionEnabled = false
-                self.sortButton.alpha = 0.5
-            }else{
-                self.sortButton.isUserInteractionEnabled = true
-                self.sortButton.alpha = 1.0
-            }
+        if self.controller.blockedSortButton() {
+            self.sortButton.isUserInteractionEnabled = false
+            self.sortButton.alpha = 0.5
+        }else{
+            self.sortButton.isUserInteractionEnabled = true
+            self.sortButton.alpha = 1.0
         }
-        
-
-    @IBAction func tappedSortButton(_ sender: UIButton) {
+    }
     
+    
+    @IBAction func tappedSortButton(_ sender: UIButton) {
+        
         self.nameTextField.resignFirstResponder()
         self.controller.sortUser()
     }
@@ -55,7 +50,7 @@ extension HomeVC: UITextFieldDelegate {
         
         self.controller.addUser(name: textField.text)
         textField.text = nil
-
+        
         self.blockedSortButton()
         
         self.usersTableView.reloadData()
@@ -74,7 +69,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell: UserCell? = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath) as? UserCell
-
+        
         cell?.setup(value: self.controller.loadCurrentUser(indexPath: indexPath))
         
         return cell ?? UITableViewCell()
@@ -88,6 +83,6 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         }else{
             self.usersTableView.reloadData()
         }
-
+        
     }
 }
