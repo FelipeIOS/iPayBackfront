@@ -7,9 +7,8 @@
 
 import Foundation
 
-
 class HomeController {
-
+    
     var arrayNameImages:[String] = ["Image-1","Image-2","Image-3","Image-4","Image-5"]
     var arrayUser:[User] = []
     var sortedUser:User?
@@ -33,7 +32,6 @@ class HomeController {
         } else {
             return true
         }
-        
     }
     
     
@@ -52,14 +50,12 @@ class HomeController {
         if self.sortedUser === self.arrayUser[indexPath.row] {
             
             return true
-           
+            
         }else{
             
             self.arrayUser.remove(at: indexPath.row)
             return false
         }
-        
     }
-    
     
 }

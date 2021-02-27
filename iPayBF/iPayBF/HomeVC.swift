@@ -15,6 +15,7 @@ class HomeVC: UIViewController {
     @IBOutlet weak var usersTableView: UITableView!
     
     private var controller: HomeController = HomeController()
+    var alert:Alert?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,7 @@ class HomeVC: UIViewController {
         self.usersTableView.delegate = self
         self.nameTextField.delegate = self
         self.blockedSortButton()
+        self.alert = Alert(controller: self)
         
     }
     
@@ -42,7 +44,7 @@ class HomeVC: UIViewController {
     
         self.nameTextField.resignFirstResponder()
         self.controller.sortUser()
-        print("tappedSortButton")
+
     }
     
 }
@@ -79,11 +81,15 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if self.controller.checkUserPayer(indexPath: indexPath) {
+
+           // self.alert?.showAlert(titulo: "Parabéns!", mensagem: "Você foi o sorteado da vez, pague a conta!", tituloBotao: "Foge não!")
+            self.alert?.detailAlert(titulo: "Parabéns!", mensagem: "Você foi o sorteado da vez, pague a conta!", completion: {
+                print("Sair do app Funcionando")
+            })
             
-            print("parabens vc foi o sorteado da vez, pague a conta")
         }else{
             self.usersTableView.reloadData()
         }
-
     }
+    
 }
