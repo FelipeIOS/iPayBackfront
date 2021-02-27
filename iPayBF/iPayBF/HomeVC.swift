@@ -23,14 +23,31 @@ class HomeVC: UIViewController {
         self.usersTableView.dataSource = self
         self.usersTableView.delegate = self
         self.nameTextField.delegate = self
-    
+        
+        self.blockedSortButton()
+        
         // Do any additional setup after loading the view.
+    }
+    
+    private func blockedSortButton() {
+    
+        if self.controller.blockedSortButton() {
+            self.sortButton.isUserInteractionEnabled = false
+            self.sortButton.alpha = 0.5
+            
+        }else{
+            self.sortButton.isUserInteractionEnabled = true
+            self.sortButton.alpha = 1.0
+            
+        }
     }
 
     @IBAction func tappedSortButton(_ sender: UIButton) {
     
         self.nameTextField.resignFirstResponder()
         self.controller.sortUser()
+        
+        print("tappedSortButton")
     }
     
 }
@@ -42,6 +59,7 @@ extension HomeVC: UITextFieldDelegate {
         self.controller.addUser(name: textField.text)
         textField.text = nil
 
+        self.blockedSortButton()
         self.usersTableView.reloadData()
         
         return true

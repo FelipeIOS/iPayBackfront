@@ -14,9 +14,7 @@ class HomeController {
     var arrayUser:[User] = []
     var sortedUser:User?
     
-    
     func sortUser() {
-        
         self.sortedUser = self.arrayUser.randomElement()
     }
     
@@ -27,6 +25,14 @@ class HomeController {
     }
     
     
+    func blockedSortButton() -> Bool {
+        
+        if self.arrayUser.count > 1 {
+            return false
+        }else {
+            return true
+        }
+    }
     
     func count() -> Int {
         
