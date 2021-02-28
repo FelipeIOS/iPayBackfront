@@ -19,6 +19,7 @@
 		BC38B32225E48EE700E25C94 /* ListaUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC38B32025E48EE700E25C94 /* ListaUserTableViewCell.xib */; };
 		BC38B32525E48F4500E25C94 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC38B32425E48F4500E25C94 /* HomeViewController.swift */; };
 		BC38B32925E491B400E25C94 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC38B32825E491B400E25C94 /* Usuario.swift */; };
+		BCC8AAA125EB31BD00427B08 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC8AAA025EB31BD00427B08 /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		BC38B32025E48EE700E25C94 /* ListaUserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListaUserTableViewCell.xib; sourceTree = "<group>"; };
 		BC38B32425E48F4500E25C94 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BC38B32825E491B400E25C94 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		BCC8AAA025EB31BD00427B08 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		BC27D83A25E721B700DCE8DB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BCC8AA9F25EB319100427B08 /* Alert */,
 				BC27D83B25E721CF00DCE8DB /* HomeController.swift */,
 			);
 			path = Controller;
@@ -115,6 +118,14 @@
 				B2F7FFD725E473280038370E /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		BCC8AA9F25EB319100427B08 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				BCC8AAA025EB31BD00427B08 /* Alert.swift */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +206,7 @@
 				BC38B32925E491B400E25C94 /* Usuario.swift in Sources */,
 				B2F7FFCD25E473260038370E /* AppDelegate.swift in Sources */,
 				BC38B32125E48EE700E25C94 /* ListaUserTableViewCell.swift in Sources */,
+				BCC8AAA125EB31BD00427B08 /* Alert.swift in Sources */,
 				B2F7FFCF25E473260038370E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

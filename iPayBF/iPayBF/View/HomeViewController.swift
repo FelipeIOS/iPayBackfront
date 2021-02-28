@@ -16,15 +16,51 @@ class HomeViewController: UIViewController {
 	
 	// MARK: - Variable
 	private var controller: HomeController = HomeController()
-
+	private var alert: Alert?
 	
+//	override func loadView() {
+//		print(#function)
+//	}
+
 	override func viewDidLoad() {
+		print(#function)
+		
 		super.viewDidLoad()
 		
 		configTableView()
 		configTextField()
 		self.blockedSortButon()
+		
+		self.alert = Alert(controller: self)
 	}
+	
+//	override func viewWillAppear(_ animated: Bool) {
+//		super.viewWillAppear(animated)
+//		print(#function)
+//	}
+//	
+//	override func viewWillLayoutSubviews() {
+//		print(#function)
+//	}
+//	
+//	override func viewDidLayoutSubviews() {
+//		print(#function)
+//	}
+//	
+//	override func viewDidAppear(_ animated: Bool) {
+//		super.viewDidAppear(animated)
+//		print(#function)
+//	}
+//	
+//	override func viewWillDisappear(_ animated: Bool) {
+//		super.viewWillDisappear(animated)
+//		print(#function)
+//	}
+//	
+//	override func viewDidDisappear(_ animated: Bool) {
+//		super.viewDidDisappear(animated)
+//		print(#function)
+//	}
 	
 	
 	// MARK: - Function
@@ -79,6 +115,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		if self.controller.checkUserPayer(indexPath: indexPath) {
+			
+//			self.alert?.showAlert(title: "Parabéns", message: "Você foi sorteado para pagar a conta!", typeButton: "Foge não")
+			self.alert?.detailAlert(title: "Parabéns", message: "Paga ai po", completion: {
+				print("Saindo o AlertController")
+			})
+			
+			
 			print("Sorteado!!")
 		} else {
 			print("Ufa!")
