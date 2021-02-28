@@ -68,19 +68,15 @@
 		B2F7FFCB25E473260038370E /* iPayBF */ = {
 			isa = PBXGroup;
 			children = (
+				BC27D84225E7303500DCE8DB /* Storyboard */,
+				BC27D83825E7215D00DCE8DB /* Model */,
 				BC27D83F25E7221100DCE8DB /* View */,
 				BC27D83A25E721B700DCE8DB /* Controller */,
 				B2F7FFCC25E473260038370E /* AppDelegate.swift */,
 				B2F7FFCE25E473260038370E /* SceneDelegate.swift */,
-				BC27D83825E7215D00DCE8DB /* Model */,
-				B2F7FFD025E473260038370E /* ViewController.swift */,
-				BC38B32425E48F4500E25C94 /* HomeViewController.swift */,
 				BC38B31F25E48EE700E25C94 /* ListaUserTableViewCell.swift */,
-				BC38B31B25E48D7900E25C94 /* Home.storyboard */,
 				BC38B32025E48EE700E25C94 /* ListaUserTableViewCell.xib */,
-				B2F7FFD225E473260038370E /* Main.storyboard */,
 				B2F7FFD525E473280038370E /* Assets.xcassets */,
-				B2F7FFD725E473280038370E /* LaunchScreen.storyboard */,
 				B2F7FFDA25E473280038370E /* Info.plist */,
 			);
 			path = iPayBF;
@@ -105,8 +101,20 @@
 		BC27D83F25E7221100DCE8DB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BC38B32425E48F4500E25C94 /* HomeViewController.swift */,
+				B2F7FFD025E473260038370E /* ViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		BC27D84225E7303500DCE8DB /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				BC38B31B25E48D7900E25C94 /* Home.storyboard */,
+				B2F7FFD225E473260038370E /* Main.storyboard */,
+				B2F7FFD725E473280038370E /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

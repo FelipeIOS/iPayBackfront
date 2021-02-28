@@ -54,5 +54,13 @@ class HomeController {
 		return self.users[indexPath.row]
 	}
 	
+	func blockedSortButton() -> Bool {
+		if self.users.count <= 1 {
+			return true
+		} else {
+			return false
+		}
+	}
+	
 	
 }

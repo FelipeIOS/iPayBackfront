@@ -16,7 +16,6 @@ class ListaUserTableViewCell: UITableViewCell {
 	@IBOutlet weak var cartaoImageView: UIImageView!
 	
 	
-	
 	static func nib() -> UINib {
 		return UINib(nibName: self.identifier, bundle: nil)
 	}
@@ -34,3 +33,4 @@ class ListaUserTableViewCell: UITableViewCell {
 
 	
 }
+ 

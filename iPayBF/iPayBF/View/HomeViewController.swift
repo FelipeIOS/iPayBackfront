@@ -23,6 +23,7 @@ class HomeViewController: UIViewController {
 		
 		configTableView()
 		configTextField()
+		self.blockedSortButon()
 	}
 	
 	
@@ -38,10 +39,24 @@ class HomeViewController: UIViewController {
 		self.nomeTextField.delegate = self
 	}
 	
+	private func blockedSortButon() {
+		if self.controller.blockedSortButton() {
+			self.sortButton.isUserInteractionEnabled = false
+			self.sortButton.alpha = 0.5
+		} else {
+			self.sortButton.isUserInteractionEnabled = true
+			self.sortButton.alpha = 1.0
+		}
+	}
+	
 	
 	// MARK: - Action
 	@IBAction func didTapSortearButton(_ sender: UIButton) {
 		self.nomeTextField.isEnabled = false
+		
+		self.sortButton.isUserInteractionEnabled = false
+		self.sortButton.alpha = 0.5
+		
 		self.controller.sortUser()
 	}
 	
@@ -84,6 +99,7 @@ extension HomeViewController: UITextFieldDelegate {
 			self.tableView.reloadData()
 		}
 		
+		self.blockedSortButon()
 		self.nomeTextField.resignFirstResponder()
 		self.nomeTextField.text = nil
 		return false
