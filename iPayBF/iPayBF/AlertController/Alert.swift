@@ -31,16 +31,13 @@ class Alert {
         
         let alert:UIAlertController = UIAlertController(title: titulo, message: mensagem, preferredStyle: .alert)
 
-        let ok:UIAlertAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
-        
-        let sair:UIAlertAction = UIAlertAction(title: "Sair do app", style: .default) { (acao) in
+        let ok:UIAlertAction = UIAlertAction(title: "OK Entendi", style: .default) { (acao) in
             completion()
         }
         
         alert.addAction(ok)
-        alert.addAction(sair)
-        self.controller.present(alert, animated: true, completion: nil)
         
+        self.controller.present(alert, animated: true, completion: nil)
     }
     
 }
