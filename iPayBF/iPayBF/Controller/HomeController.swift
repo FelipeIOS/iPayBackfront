@@ -13,6 +13,11 @@ class HomeController {
     var arrayUser:[User] = []
     var sortedUser:User?
     
+    func removeAllUsers() {
+        
+        arrayUser.removeAll()
+        sortedUser = nil
+    }
     
     func sortUser() {
         
