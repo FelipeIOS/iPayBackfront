@@ -27,14 +27,13 @@ class Alert {
 	func detailAlert(title: String, message: String, completion: @escaping() -> Void) {
 	
 		let alert: UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-		let buttonOK = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+//		let buttonOK = UIAlertAction(title: "OK", style: .cancel, handler: nil)
 		
-		let buttonExit = UIAlertAction(title: "Sair", style: .default) { (code) in
+		let buttonOK = UIAlertAction(title: "OK", style: .default) { (code) in
 			completion()
 		}
 		
 		alert.addAction(buttonOK)
-		alert.addAction(buttonExit)
 		
 		self.controller.present(alert, animated: true, completion: nil)
 		

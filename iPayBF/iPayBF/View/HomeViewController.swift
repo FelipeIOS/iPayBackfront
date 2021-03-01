@@ -18,49 +18,19 @@ class HomeViewController: UIViewController {
 	private var controller: HomeController = HomeController()
 	private var alert: Alert?
 	
-//	override func loadView() {
-//		print(#function)
-//	}
-
+	
 	override func viewDidLoad() {
 		print(#function)
 		
 		super.viewDidLoad()
 		
-		configTableView()
-		configTextField()
+		self.configTableView()
+		self.configTextField()
 		self.blockedSortButon()
+		self.configButton()
 		
 		self.alert = Alert(controller: self)
 	}
-	
-//	override func viewWillAppear(_ animated: Bool) {
-//		super.viewWillAppear(animated)
-//		print(#function)
-//	}
-//	
-//	override func viewWillLayoutSubviews() {
-//		print(#function)
-//	}
-//	
-//	override func viewDidLayoutSubviews() {
-//		print(#function)
-//	}
-//	
-//	override func viewDidAppear(_ animated: Bool) {
-//		super.viewDidAppear(animated)
-//		print(#function)
-//	}
-//	
-//	override func viewWillDisappear(_ animated: Bool) {
-//		super.viewWillDisappear(animated)
-//		print(#function)
-//	}
-//	
-//	override func viewDidDisappear(_ animated: Bool) {
-//		super.viewDidDisappear(animated)
-//		print(#function)
-//	}
 	
 	
 	// MARK: - Function
@@ -69,10 +39,16 @@ class HomeViewController: UIViewController {
 		self.tableView.dataSource = self
 		self.tableView.delegate = self
 		self.tableView.register(ListaUserTableViewCell.nib(), forCellReuseIdentifier: ListaUserTableViewCell.identifier)
+		self.tableView.register(EmptyTableViewCell.nib(), forCellReuseIdentifier: EmptyTableViewCell.identifier)
+		self.tableView.tableFooterView = UIView()
 	}
 	
 	func configTextField() {
 		self.nomeTextField.delegate = self
+	}
+	
+	func configButton() {
+		self.sortButton.layer.cornerRadius = 5
 	}
 	
 	private func blockedSortButon() {
@@ -104,28 +80,48 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		
 		return self.controller.count()
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: ListaUserTableViewCell.identifier, for: indexPath) as? ListaUserTableViewCell
-		cell?.configCell(user: self.controller.getUser(indexPath: indexPath))
-		return cell ?? UITableViewCell()
+		
+		if self.controller.checkEmptyState() {
+			
+			let cell = tableView.dequeueReusableCell(withIdentifier: EmptyTableViewCell.identifier, for: indexPath) as? EmptyTableViewCell
+			return cell ?? UITableViewCell()
+			
+		} else {
+			
+			let cell = tableView.dequeueReusableCell(withIdentifier: ListaUserTableViewCell.identifier, for: indexPath) as? ListaUserTableViewCell
+			cell?.configCell(user: self.controller.getUser(indexPath: indexPath))
+			return cell ?? UITableViewCell()
+			
+		}
+		
+		
 	}
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		
 		if self.controller.checkUserPayer(indexPath: indexPath) {
 			
-//			self.alert?.showAlert(title: "Parabéns", message: "Você foi sorteado para pagar a conta!", typeButton: "Foge não")
 			self.alert?.detailAlert(title: "Parabéns", message: "Paga ai po", completion: {
 				print("Saindo o AlertController")
+				
+				self.controller.removeAllUsers()
+				self.blockedSortButon()
+				self.nomeTextField.isEnabled = true
+				self.tableView.reloadData()
+				
 			})
 			
-			
 			print("Sorteado!!")
+			
 		} else {
 			print("Ufa!")
 		}
+		
 		self.tableView.reloadData()
 	}
 	

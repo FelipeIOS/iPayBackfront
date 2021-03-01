@@ -35,7 +35,22 @@ class HomeController {
 	}
 	
 	func count() -> Int {
-		self.users.count
+		
+		if self.users.count > 0 {
+			return self.users.count
+		}
+		return 1
+		
+	}
+	
+	func checkEmptyState() -> Bool {
+		
+		if self.users.count == 0 {
+			return true
+		} else {
+			return false
+		}
+		
 	}
 	
 	func checkUserPayer(indexPath: IndexPath) -> Bool {
@@ -60,6 +75,11 @@ class HomeController {
 		} else {
 			return false
 		}
+	}
+	
+	func removeAllUsers() {
+		self.users.removeAll()
+		sortedUser = nil
 	}
 	
 	
