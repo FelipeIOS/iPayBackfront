@@ -24,6 +24,14 @@ class HomeController {
         self.arrayUser.append(User(name: name ?? "", imageName: self.arrayNameImages.randomElement() ?? ""))
     }
     
+    func blockedSortButton() -> Bool {
+        if self.arrayUser.count > 1 {
+            return false
+        } else {
+            return true
+        }
+    }
+    
     
     func blockedSortButton() -> Bool {
         
