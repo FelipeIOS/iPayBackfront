@@ -33,15 +33,6 @@ class HomeController {
     }
     
     
-    func blockedSortButton() -> Bool {
-        
-        if self.arrayUser.count > 1 {
-            return false
-        }else {
-            return true
-        }
-    }
-    
     func count() -> Int {
         
         return self.arrayUser.count
@@ -63,8 +54,7 @@ class HomeController {
             self.arrayUser.remove(at: indexPath.row)
             return false
         }
-        
+
     }
-    
-    
+
 }
