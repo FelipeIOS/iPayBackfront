@@ -21,6 +21,8 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.usersTableView.register(UINib(nibName: "EmptyCell", bundle: nil), forCellReuseIdentifier: "EmptyCell")
+        
         self.usersTableView.tableFooterView = UIView()
         self.usersTableView.dataSource = self
         self.usersTableView.delegate = self
@@ -74,11 +76,22 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell: UserCell? = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath) as? UserCell
-
-        cell?.setup(value: self.controller.loadCurrentUser(indexPath: indexPath))
         
-        return cell ?? UITableViewCell()
+        if self.controller.checkEmptyState() {
+            
+            let cell: EmptyCell? = tableView.dequeueReusableCell(withIdentifier: "EmptyCell", for: indexPath) as? EmptyCell
+            
+            return cell ?? UITableViewCell()
+            
+        }else{
+            
+            let cell: UserCell? = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath) as? UserCell
+
+            cell?.setup(value: self.controller.loadCurrentUser(indexPath: indexPath))
+            
+            return cell ?? UITableViewCell()
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

@@ -39,10 +39,22 @@ class HomeController {
         }
     }
     
+    func checkEmptyState() -> Bool {
+        
+        if self.arrayUser.count > 0 {
+            return false
+            
+        }
+        return true
+    }
+    
     
     func count() -> Int {
         
-        return self.arrayUser.count
+        if self.arrayUser.count > 0 {
+            return self.arrayUser.count
+        }
+        return 1
     }
     
     func loadCurrentUser(indexPath: IndexPath) -> User {
@@ -62,5 +74,4 @@ class HomeController {
             return false
         }
     }
-    
 }
