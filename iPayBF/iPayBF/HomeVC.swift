@@ -1,4 +1,9 @@
-
+//
+//  ViewController.swift
+//  iPayBF
+//
+//  Created by Felipe Miranda on 22/02/21.
+//
 
 import UIKit
 
@@ -10,36 +15,36 @@ class HomeVC: UIViewController {
     @IBOutlet weak var usersTableView: UITableView!
     
     private var controller: HomeController = HomeController()
+    var alert:Alert?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         self.usersTableView.dataSource = self
         self.usersTableView.delegate = self
         self.nameTextField.delegate = self
-        
         self.blockedSortButton()
-        
-        
+        self.alert = Alert(controller: self)
         
     }
+    
     private func blockedSortButton() {
         
         if self.controller.blockedSortButton() {
             self.sortButton.isUserInteractionEnabled = false
             self.sortButton.alpha = 0.5
-        }else{
+        } else {
             self.sortButton.isUserInteractionEnabled = true
             self.sortButton.alpha = 1.0
         }
+        
     }
     
-    
     @IBAction func tappedSortButton(_ sender: UIButton) {
-        
+    
         self.nameTextField.resignFirstResponder()
         self.controller.sortUser()
+
     }
     
 }
@@ -50,9 +55,7 @@ extension HomeVC: UITextFieldDelegate {
         
         self.controller.addUser(name: textField.text)
         textField.text = nil
-        
         self.blockedSortButton()
-        
         self.usersTableView.reloadData()
         
         return true
@@ -69,7 +72,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell: UserCell? = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath) as? UserCell
-        
+
         cell?.setup(value: self.controller.loadCurrentUser(indexPath: indexPath))
         
         return cell ?? UITableViewCell()
@@ -78,11 +81,15 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if self.controller.checkUserPayer(indexPath: indexPath) {
+
+           // self.alert?.showAlert(titulo: "Parabéns!", mensagem: "Você foi o sorteado da vez, pague a conta!", tituloBotao: "Foge não!")
+            self.alert?.detailAlert(titulo: "Parabéns!", mensagem: "Você foi o sorteado da vez, pague a conta!", completion: {
+                print("Sair do app Funcionando")
+            })
             
-            print("parabens vc foi o sorteado da vez, pague a conta")
         }else{
             self.usersTableView.reloadData()
         }
-        
     }
+    
 }
