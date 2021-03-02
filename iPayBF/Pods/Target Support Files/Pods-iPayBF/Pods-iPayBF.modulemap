@@ -1,0 +1,6 @@
+framework module Pods_iPayBF {
+  umbrella header "Pods-iPayBF-umbrella.h"
+
+  export *
+  module * { export * }
+}

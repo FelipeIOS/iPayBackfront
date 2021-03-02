@@ -106,15 +106,33 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 		
 		if self.controller.checkUserPayer(indexPath: indexPath) {
 			
-			self.alert?.detailAlert(title: "Parabéns", message: "Paga ai po", completion: {
-				print("Saindo o AlertController")
+			self.alert?.showPopup(completion: {
+				print("Show Popup - Com Completion")
 				
 				self.controller.removeAllUsers()
 				self.blockedSortButon()
 				self.nomeTextField.isEnabled = true
 				self.tableView.reloadData()
-				
 			})
+			
+//			self.alert?.showPopup {
+//				print("Show Popup - Sem Completion")
+//
+//				self.controller.removeAllUsers()
+//				self.blockedSortButon()
+//				self.nomeTextField.isEnabled = true
+//				self.tableView.reloadData()
+//			}
+			
+			//			self.alert?.detailAlert(title: "Parabéns", message: "Paga ai po", completion: {
+			//				print("Saindo o AlertController")
+			//
+			//				self.controller.removeAllUsers()
+			//				self.blockedSortButon()
+			//				self.nomeTextField.isEnabled = true
+			//				self.tableView.reloadData()
+			//
+			//			})
 			
 			print("Sorteado!!")
 			
