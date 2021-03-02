@@ -16,12 +16,14 @@
 		B2F7FFD425E473260038370E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F7FFD225E473260038370E /* Main.storyboard */; };
 		B2F7FFD625E473280038370E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2F7FFD525E473280038370E /* Assets.xcassets */; };
 		B2F7FFD925E473280038370E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F7FFD725E473280038370E /* LaunchScreen.storyboard */; };
+		BF6B780E36362842DAA8AD39 /* Pods_iPayBF.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F6E0A36E85C18AA1191C64 /* Pods_iPayBF.framework */; };
 		D3E5033125E9B0EE00F933FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E5032F25E9B0EE00F933FC /* AppDelegate.swift */; };
 		D3E5033225E9B0EE00F933FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E5033025E9B0EE00F933FC /* SceneDelegate.swift */; };
 		D3E5033725E9CA8900F933FC /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E5033625E9CA8900F933FC /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E60F6F6C2B6664BF751D95F /* Pods-iPayBF.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPayBF.release.xcconfig"; path = "Target Support Files/Pods-iPayBF/Pods-iPayBF.release.xcconfig"; sourceTree = "<group>"; };
 		B2A3E04625EDA93400D7FB4E /* EmptyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCell.swift; sourceTree = "<group>"; };
 		B2A3E04725EDA93400D7FB4E /* EmptyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyCell.xib; sourceTree = "<group>"; };
 		B2F7005625E70D4F0038370E /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
@@ -33,9 +35,11 @@
 		B2F7FFD525E473280038370E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2F7FFD825E473280038370E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2F7FFDA25E473280038370E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9F6E0A36E85C18AA1191C64 /* Pods_iPayBF.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPayBF.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3E5032F25E9B0EE00F933FC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		D3E5033025E9B0EE00F933FC /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = SOURCE_ROOT; };
 		D3E5033625E9CA8900F933FC /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		E84B5A52D5C41575D2231AFF /* Pods-iPayBF.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPayBF.debug.xcconfig"; path = "Target Support Files/Pods-iPayBF/Pods-iPayBF.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,12 +47,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF6B780E36362842DAA8AD39 /* Pods_iPayBF.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A31503035C13909371807A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9F6E0A36E85C18AA1191C64 /* Pods_iPayBF.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B2A3E04B25EDA94300D7FB4E /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +101,8 @@
 			children = (
 				B2F7FFCB25E473260038370E /* iPayBF */,
 				B2F7FFCA25E473260038370E /* Products */,
+				E00E1BA233F6F840F7574FFE /* Pods */,
+				8A31503035C13909371807A9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +140,16 @@
 			path = AlertController;
 			sourceTree = "<group>";
 		};
+		E00E1BA233F6F840F7574FFE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E84B5A52D5C41575D2231AFF /* Pods-iPayBF.debug.xcconfig */,
+				6E60F6F6C2B6664BF751D95F /* Pods-iPayBF.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +157,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2F7FFDD25E473280038370E /* Build configuration list for PBXNativeTarget "iPayBF" */;
 			buildPhases = (
+				C92777F57D3DE18AA8CE0363 /* [CP] Check Pods Manifest.lock */,
 				B2F7FFC525E473260038370E /* Sources */,
 				B2F7FFC625E473260038370E /* Frameworks */,
 				B2F7FFC725E473260038370E /* Resources */,
+				CA8C2AC46AD75AE83CB74D23 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -190,6 +217,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C92777F57D3DE18AA8CE0363 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iPayBF-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA8C2AC46AD75AE83CB74D23 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iPayBF/Pods-iPayBF-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iPayBF/Pods-iPayBF-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iPayBF/Pods-iPayBF-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B2F7FFC525E473260038370E /* Sources */ = {
@@ -347,6 +416,7 @@
 		};
 		B2F7FFDE25E473280038370E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E84B5A52D5C41575D2231AFF /* Pods-iPayBF.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -365,6 +435,7 @@
 		};
 		B2F7FFDF25E473280038370E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E60F6F6C2B6664BF751D95F /* Pods-iPayBF.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

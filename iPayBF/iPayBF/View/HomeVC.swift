@@ -17,6 +17,7 @@ class HomeVC: UIViewController {
     
     private var controller: HomeController = HomeController()
     var alert:Alert?
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,7 @@ class HomeVC: UIViewController {
         self.blockedSortButton()
         self.alert = Alert(controller: self)
         self.sortButton.layer.cornerRadius = 5
+    
         
     }
     
@@ -98,13 +100,16 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         
         if self.controller.checkUserPayer(indexPath: indexPath) {
 
-           // self.alert?.showAlert(titulo: "Parabéns!", mensagem: "Você foi o sorteado da vez, pague a conta!", tituloBotao: "Foge não!")
-            self.alert?.detailAlert(titulo: "Parabéns!", mensagem: "Você foi o sorteado da vez, pague a conta!", completion: {
             
+            self.alert?.showPopup(completion: {
                 self.controller.removeAllUsers()
                 self.usersTableView.reloadData()
                 self.blockedSortButton()
             })
+           // self.alert?.showAlert(titulo: "Parabéns!", mensagem: "Você foi o sorteado da vez, pague a conta!", tituloBotao: "Foge não!")
+            
+            // funçao - metodo de classe e metodo de instancia. Metodo de instancia e metodo estatico.
+            
             
         }else{
             self.usersTableView.reloadData()
