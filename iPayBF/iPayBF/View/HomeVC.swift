@@ -99,11 +99,22 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         if self.controller.checkUserPayer(indexPath: indexPath) {
 
            // self.alert?.showAlert(titulo: "Parabéns!", mensagem: "Você foi o sorteado da vez, pague a conta!", tituloBotao: "Foge não!")
-            self.alert?.detailAlert(titulo: "Parabéns!", mensagem: "Você foi o sorteado da vez, pague a conta!", completion: {
+//            self.alert?.detailAlert(titulo: "Parabéns!", mensagem: "Você foi o sorteado da vez, pague a conta!", completion: {_ in
+//
+//                self.controller.removeAllUsers()
+//                self.usersTableView.reloadData()
+//                self.blockedSortButton()
+//            })
             
-                self.controller.removeAllUsers()
-                self.usersTableView.reloadData()
-                self.blockedSortButton()
+            self.alert?.detailAlert(titulo: "", mensagem: "", completion: { (success) in
+                
+                
+                if success {
+                    
+                    self.controller.removeAllUsers()
+                    self.usersTableView.reloadData()
+                    self.blockedSortButton()
+                }
             })
             
         }else{
