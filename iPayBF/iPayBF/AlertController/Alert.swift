@@ -57,15 +57,28 @@ class Alert {
     
     func detailAlert(titulo:String, mensagem:String, completion:@escaping(_ value: Bool) -> Void) {
         
-        let alert:UIAlertController = UIAlertController(title: titulo, message: mensagem, preferredStyle: .alert)
-
-        let ok:UIAlertAction = UIAlertAction(title: "OK Entendi", style: .default) { (acao) in
-            completion(true)
+        let title = "Aeeeee :) "
+        let message = "Você foi o premiado da vez, entregue seu cartão e faça a boa para os seus amigos da mesa, pague a conta!!!"
+        let image = UIImage(named: "Image")
+        
+        // Create the dialog
+        let popup = PopupDialog(title: title, message: message, image: image)
+        popup.view.backgroundColor = .black
+        // Create buttons
+        let buttonOne = DefaultButton(title: "OK") {
+            print("You canceled the car dialog.")
+            
+          completion(true)
         }
         
-        alert.addAction(ok)
+        buttonOne.backgroundColor = UIColor(cgColor: CGColor(red: 75/255.0, green: 162/255.0, blue: 218/255.0, alpha: 1))
+        buttonOne.titleColor = .white
+        popup.addButtons([buttonOne])
+
+        // Present dialog
+        self.controller.present(popup, animated: true, completion: nil)
         
-        self.controller.present(alert, animated: true, completion: nil)
+
     }
     
 }
