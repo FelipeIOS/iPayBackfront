@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PaymentCell" rowHeight="71" id="KGk-i7-Jjw" customClass="PaymentCell" customModule="iPayBF" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="381" height="71"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="381" height="71"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="credit-card" translatesAutoresizingMaskIntoConstraints="NO" id="WZd-SI-x7x">
+                        <rect key="frame" x="15" y="9" width="52" height="53"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="53" id="IX4-si-Mpj"/>
+                            <constraint firstAttribute="width" constant="52" id="O8e-Hg-Sni"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyJ-n6-ur3">
+                        <rect key="frame" x="82" y="13" width="284" height="45"/>
+                        <color key="backgroundColor" red="0.26462149639999999" green="0.6741649622" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                        <color key="tintColor" red="0.26462149639999999" green="0.6741649622" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <state key="normal" title="pagar">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <connections>
+                            <action selector="tappedPaymentButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="blr-fE-54T"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="WZd-SI-x7x" secondAttribute="bottom" constant="9" id="Iza-eb-Q3y"/>
+                    <constraint firstItem="fyJ-n6-ur3" firstAttribute="leading" secondItem="WZd-SI-x7x" secondAttribute="trailing" constant="15" id="R5j-7n-8nY"/>
+                    <constraint firstAttribute="bottom" secondItem="fyJ-n6-ur3" secondAttribute="bottom" constant="13" id="UIN-5O-fwG"/>
+                    <constraint firstAttribute="trailing" secondItem="fyJ-n6-ur3" secondAttribute="trailing" constant="15" id="WeF-FR-Clc"/>
+                    <constraint firstItem="WZd-SI-x7x" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="dtt-Af-nbD"/>
+                    <constraint firstItem="fyJ-n6-ur3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="opU-Jp-Lwy"/>
+                    <constraint firstItem="WZd-SI-x7x" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="yKh-pX-D4X"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cardImage" destination="WZd-SI-x7x" id="Klz-PV-2aY"/>
+                <outlet property="paymentButton" destination="fyJ-n6-ur3" id="OiM-ND-26q"/>
+            </connections>
+            <point key="canvasLocation" x="-239.85507246376812" y="117.52232142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="credit-card" width="128" height="128"/>
+    </resources>
+</document>
