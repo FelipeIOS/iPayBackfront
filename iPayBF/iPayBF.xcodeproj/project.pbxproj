@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,13 @@
 		B2F7FFD425E473260038370E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F7FFD225E473260038370E /* Main.storyboard */; };
 		B2F7FFD625E473280038370E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2F7FFD525E473280038370E /* Assets.xcassets */; };
 		B2F7FFD925E473280038370E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F7FFD725E473280038370E /* LaunchScreen.storyboard */; };
+		D3D3A48625F2F50A0020E22B /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D3A48525F2F50A0020E22B /* AccountVC.swift */; };
+		D3D3A48D25F2F72B0020E22B /* PaymentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D3A48B25F2F72B0020E22B /* PaymentCell.swift */; };
+		D3D3A48E25F2F72B0020E22B /* PaymentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3D3A48C25F2F72B0020E22B /* PaymentCell.xib */; };
+		D3D3A49225F2F9980020E22B /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D3A49025F2F9980020E22B /* ProductCell.swift */; };
+		D3D3A49325F2F9980020E22B /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3D3A49125F2F9980020E22B /* ProductCell.xib */; };
+		D3D3A49625F30F4A0020E22B /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D3A49525F30F4A0020E22B /* Account.swift */; };
+		D3D3A49925F310E50020E22B /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D3A49825F310E50020E22B /* ProductList.swift */; };
 		D3E5033125E9B0EE00F933FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E5032F25E9B0EE00F933FC /* AppDelegate.swift */; };
 		D3E5033225E9B0EE00F933FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E5033025E9B0EE00F933FC /* SceneDelegate.swift */; };
 		D3E5033725E9CA8900F933FC /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E5033625E9CA8900F933FC /* Alert.swift */; };
@@ -37,6 +44,13 @@
 		B2F7FFDA25E473280038370E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6365269A393193FBC2290EB /* Pods-iPayBF.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPayBF.debug.xcconfig"; path = "Target Support Files/Pods-iPayBF/Pods-iPayBF.debug.xcconfig"; sourceTree = "<group>"; };
 		CA410D166813BD283DC9F056 /* Pods-iPayBF.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPayBF.release.xcconfig"; path = "Target Support Files/Pods-iPayBF/Pods-iPayBF.release.xcconfig"; sourceTree = "<group>"; };
+		D3D3A48525F2F50A0020E22B /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
+		D3D3A48B25F2F72B0020E22B /* PaymentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCell.swift; sourceTree = "<group>"; };
+		D3D3A48C25F2F72B0020E22B /* PaymentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentCell.xib; sourceTree = "<group>"; };
+		D3D3A49025F2F9980020E22B /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		D3D3A49125F2F9980020E22B /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
+		D3D3A49525F30F4A0020E22B /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		D3D3A49825F310E50020E22B /* ProductList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductList.swift; sourceTree = "<group>"; };
 		D3E5032F25E9B0EE00F933FC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		D3E5033025E9B0EE00F933FC /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = SOURCE_ROOT; };
 		D3E5033625E9CA8900F933FC /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
@@ -60,7 +74,6 @@
 				B6365269A393193FBC2290EB /* Pods-iPayBF.debug.xcconfig */,
 				CA410D166813BD283DC9F056 /* Pods-iPayBF.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -77,6 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				B2F7005A25E721550038370E /* User.swift */,
+				D3D3A49525F30F4A0020E22B /* Account.swift */,
+				D3D3A49825F310E50020E22B /* ProductList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -92,8 +107,8 @@
 		B2F7005F25E721990038370E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B2A3E04B25EDA94300D7FB4E /* CustomCells */,
-				B2F7FFD025E473260038370E /* HomeVC.swift */,
+				D3D3A48425F2F4E40020E22B /* Account */,
+				D3D3A48325F2F4CE0020E22B /* Home */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -132,6 +147,35 @@
 				B2F7FFDA25E473280038370E /* Info.plist */,
 			);
 			path = iPayBF;
+			sourceTree = "<group>";
+		};
+		D3D3A48325F2F4CE0020E22B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B2A3E04B25EDA94300D7FB4E /* CustomCells */,
+				B2F7FFD025E473260038370E /* HomeVC.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D3D3A48425F2F4E40020E22B /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				D3D3A48925F2F5160020E22B /* CustomCells */,
+				D3D3A48525F2F50A0020E22B /* AccountVC.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		D3D3A48925F2F5160020E22B /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				D3D3A48B25F2F72B0020E22B /* PaymentCell.swift */,
+				D3D3A48C25F2F72B0020E22B /* PaymentCell.xib */,
+				D3D3A49025F2F9980020E22B /* ProductCell.swift */,
+				D3D3A49125F2F9980020E22B /* ProductCell.xib */,
+			);
+			path = CustomCells;
 			sourceTree = "<group>";
 		};
 		D3E5033525E9CA6400F933FC /* AlertController */ = {
@@ -212,6 +256,8 @@
 				B2F7FFD925E473280038370E /* LaunchScreen.storyboard in Resources */,
 				B2A3E04925EDA93400D7FB4E /* EmptyCell.xib in Resources */,
 				B2F7FFD625E473280038370E /* Assets.xcassets in Resources */,
+				D3D3A49325F2F9980020E22B /* ProductCell.xib in Resources */,
+				D3D3A48E25F2F72B0020E22B /* PaymentCell.xib in Resources */,
 				B2F7FFD425E473260038370E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,14 +311,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3D3A48D25F2F72B0020E22B /* PaymentCell.swift in Sources */,
+				D3D3A49225F2F9980020E22B /* ProductCell.swift in Sources */,
 				B2F7005725E70D4F0038370E /* UserCell.swift in Sources */,
 				B2A3E04825EDA93400D7FB4E /* EmptyCell.swift in Sources */,
 				B2F7FFD125E473260038370E /* HomeVC.swift in Sources */,
+				D3D3A49925F310E50020E22B /* ProductList.swift in Sources */,
+				D3D3A49625F30F4A0020E22B /* Account.swift in Sources */,
 				B2F7006125E721B60038370E /* HomeController.swift in Sources */,
 				D3E5033125E9B0EE00F933FC /* AppDelegate.swift in Sources */,
 				B2F7005B25E721550038370E /* User.swift in Sources */,
 				D3E5033225E9B0EE00F933FC /* SceneDelegate.swift in Sources */,
 				D3E5033725E9CA8900F933FC /* Alert.swift in Sources */,
+				D3D3A48625F2F50A0020E22B /* AccountVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
