@@ -8,23 +8,21 @@
 import UIKit
 
 class PaymentCell: UITableViewCell {
-
-    @IBOutlet weak var cardImageView: UIImageView!
-    @IBOutlet weak var paymentButton: UIButton!
-    
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
-    @IBAction func tappedPaymentButton(_ sender: UIButton) {
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
+	
+	// MARK: - IBOutlet
+	@IBOutlet weak var cardImageView: UIImageView!
+	@IBOutlet weak var paymentButton: UIButton!
+	
+	
+	// MARK: - Initialization
+	override func awakeFromNib() {
+		super.awakeFromNib()
+		// Initialization code
+	}
+	
+	
+	// MARK: - IBAction
+	@IBAction func tappedPaymentButton(_ sender: UIButton) {
+	}
+	
 }

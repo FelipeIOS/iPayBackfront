@@ -8,22 +8,18 @@
 import UIKit
 
 class ProductCell: UITableViewCell {
-
-    @IBOutlet weak var productLabel: UILabel!
-    @IBOutlet weak var qtdLabel: UILabel!
-    @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var productImageView: UIImageView!
-    
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
+	
+	// MARK: - IBOutlet
+	@IBOutlet weak var productLabel: UILabel!
+	@IBOutlet weak var qtdLabel: UILabel!
+	@IBOutlet weak var priceLabel: UILabel!
+	@IBOutlet weak var productImageView: UIImageView!
+	
+	
+	// MARK: - Initialization
+	override func awakeFromNib() {
+		super.awakeFromNib()
+		// Initialization code
+	}
+	
 }
