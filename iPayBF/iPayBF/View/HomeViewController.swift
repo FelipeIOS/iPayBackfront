@@ -115,25 +115,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 				self.tableView.reloadData()
 			})
 			
-//			self.alert?.showPopup {
-//				print("Show Popup - Sem Completion")
-//
-//				self.controller.removeAllUsers()
-//				self.blockedSortButon()
-//				self.nomeTextField.isEnabled = true
-//				self.tableView.reloadData()
-//			}
-			
-			//			self.alert?.detailAlert(title: "Parabéns", message: "Paga ai po", completion: {
-			//				print("Saindo o AlertController")
-			//
-			//				self.controller.removeAllUsers()
-			//				self.blockedSortButon()
-			//				self.nomeTextField.isEnabled = true
-			//				self.tableView.reloadData()
-			//
-			//			})
-			
 			print("Sorteado!!")
 			
 		} else {
