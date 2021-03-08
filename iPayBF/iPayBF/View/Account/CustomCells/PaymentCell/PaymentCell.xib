@@ -9,47 +9,53 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="87" id="KGk-i7-Jjw" customClass="PaymentCell" customModule="iPayBF" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="572" height="87"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PaymentCell" rowHeight="80" id="KGk-i7-Jjw" customClass="PaymentCell" customModule="iPayBF" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="572" height="80"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="572" height="87"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="572" height="80"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ilF-eH-vgP">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="credit-card" translatesAutoresizingMaskIntoConstraints="NO" id="ilF-eH-vgP">
                         <rect key="frame" x="15" y="9" width="52" height="53"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="53" id="Dbs-y9-YuH"/>
-                            <constraint firstAttribute="width" constant="52" id="nFn-Fg-BnD"/>
+                            <constraint firstAttribute="height" constant="53" id="g4O-7J-n5P"/>
+                            <constraint firstAttribute="width" constant="52" id="ub5-BQ-peB"/>
                         </constraints>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="0MA-aa-7ID">
-                        <rect key="frame" x="91" y="12" width="374" height="46"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gS3-Gd-VbL">
+                        <rect key="frame" x="82" y="13" width="475" height="46"/>
                         <color key="backgroundColor" red="0.26462149639999999" green="0.6741649622" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                         <color key="tintColor" red="0.26462149639999999" green="0.6741649622" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <state key="normal" title="Pagar">
+                        <state key="normal" title="pagar">
                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
                         <connections>
-                            <action selector="tappedPaymentButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="mgF-Og-2YB"/>
+                            <action selector="tappedPaymentButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="OV6-4U-RfN"/>
                         </connections>
                     </button>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="ilF-eH-vgP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="Jz6-yE-agt"/>
-                    <constraint firstAttribute="bottom" secondItem="ilF-eH-vgP" secondAttribute="bottom" constant="9" id="s3b-ss-3rN"/>
-                    <constraint firstItem="ilF-eH-vgP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="woh-hH-0t1"/>
+                    <constraint firstItem="gS3-Gd-VbL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="4z1-vh-6hI"/>
+                    <constraint firstAttribute="bottom" secondItem="gS3-Gd-VbL" secondAttribute="bottom" constant="13" id="BCB-il-cc6"/>
+                    <constraint firstItem="gS3-Gd-VbL" firstAttribute="leading" secondItem="ilF-eH-vgP" secondAttribute="trailing" constant="15" id="Wzb-1O-hRt"/>
+                    <constraint firstItem="ilF-eH-vgP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="fao-o9-0Li"/>
+                    <constraint firstItem="ilF-eH-vgP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="hI5-gD-Mjy"/>
+                    <constraint firstAttribute="bottom" secondItem="ilF-eH-vgP" secondAttribute="bottom" constant="9" id="opL-on-sw9"/>
+                    <constraint firstAttribute="trailing" secondItem="gS3-Gd-VbL" secondAttribute="trailing" constant="15" id="sKe-JG-N8a"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="cardImageView" destination="ilF-eH-vgP" id="V3o-BV-dg2"/>
-                <outlet property="paymentButton" destination="0MA-aa-7ID" id="fRv-d3-tMc"/>
+                <outlet property="paymentButton" destination="gS3-Gd-VbL" id="Fqv-Th-Rps"/>
             </connections>
-            <point key="canvasLocation" x="115.94202898550725" y="44.53125"/>
+            <point key="canvasLocation" x="115.94202898550725" y="42.1875"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="credit-card" width="128" height="128"/>
+    </resources>
 </document>
