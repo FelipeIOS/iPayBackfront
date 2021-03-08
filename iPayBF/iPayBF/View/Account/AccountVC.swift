@@ -9,10 +9,18 @@ import UIKit
 
 class AccountVC: UIViewController {
 	
+	@IBOutlet weak var usersTableView: UITableView!
+	
+	var controller: AccountController = AccountController()
+	
 	
 	// MARK: - Initialization
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
+		self.controller.loadAccountMock { (account) in
+			print(account.totalValue)
+		}
 	}
 	
 }

@@ -24,6 +24,8 @@
 		B2F7FFD425E473260038370E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F7FFD225E473260038370E /* Main.storyboard */; };
 		B2F7FFD625E473280038370E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2F7FFD525E473280038370E /* Assets.xcassets */; };
 		B2F7FFD925E473280038370E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F7FFD725E473280038370E /* LaunchScreen.storyboard */; };
+		BC75B93D25F6DE2B008E2DED /* Account.json in Resources */ = {isa = PBXBuildFile; fileRef = BC75B93C25F6DE2B008E2DED /* Account.json */; };
+		BC75B94325F6E14E008E2DED /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC75B94225F6E14E008E2DED /* AccountController.swift */; };
 		D3E5033125E9B0EE00F933FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E5032F25E9B0EE00F933FC /* AppDelegate.swift */; };
 		D3E5033225E9B0EE00F933FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E5033025E9B0EE00F933FC /* SceneDelegate.swift */; };
 		D3E5033725E9CA8900F933FC /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E5033625E9CA8900F933FC /* Alert.swift */; };
@@ -50,6 +52,8 @@
 		B2F7FFD825E473280038370E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2F7FFDA25E473280038370E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6365269A393193FBC2290EB /* Pods-iPayBF.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPayBF.debug.xcconfig"; path = "Target Support Files/Pods-iPayBF/Pods-iPayBF.debug.xcconfig"; sourceTree = "<group>"; };
+		BC75B93C25F6DE2B008E2DED /* Account.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Account.json; sourceTree = "<group>"; };
+		BC75B94225F6E14E008E2DED /* AccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
 		CA410D166813BD283DC9F056 /* Pods-iPayBF.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPayBF.release.xcconfig"; path = "Target Support Files/Pods-iPayBF/Pods-iPayBF.release.xcconfig"; sourceTree = "<group>"; };
 		D3E5032F25E9B0EE00F933FC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		D3E5033025E9B0EE00F933FC /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = SOURCE_ROOT; };
@@ -135,7 +139,8 @@
 		B2F7005E25E721930038370E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B2F7006025E721B60038370E /* HomeController.swift */,
+				BC75B94125F6E135008E2DED /* Account */,
+				BC75B94025F6E123008E2DED /* Home */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -170,6 +175,7 @@
 		B2F7FFCB25E473260038370E /* iPayBF */ = {
 			isa = PBXGroup;
 			children = (
+				BC75B93C25F6DE2B008E2DED /* Account.json */,
 				B2130B5625F2F185009BF749 /* Network */,
 				D3E5032F25E9B0EE00F933FC /* AppDelegate.swift */,
 				D3E5033025E9B0EE00F933FC /* SceneDelegate.swift */,
@@ -184,6 +190,22 @@
 				B2F7FFDA25E473280038370E /* Info.plist */,
 			);
 			path = iPayBF;
+			sourceTree = "<group>";
+		};
+		BC75B94025F6E123008E2DED /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B2F7006025E721B60038370E /* HomeController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		BC75B94125F6E135008E2DED /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				BC75B94225F6E14E008E2DED /* AccountController.swift */,
+			);
+			path = Account;
 			sourceTree = "<group>";
 		};
 		D3E5033525E9CA6400F933FC /* AlertController */ = {
@@ -265,6 +287,7 @@
 				B2A3E04925EDA93400D7FB4E /* EmptyCell.xib in Resources */,
 				B2F7FFD625E473280038370E /* Assets.xcassets in Resources */,
 				B2130B6925F302FF009BF749 /* ProductCell.xib in Resources */,
+				BC75B93D25F6DE2B008E2DED /* Account.json in Resources */,
 				B2130B6425F2F727009BF749 /* PaymentCell.xib in Resources */,
 				B2F7FFD425E473260038370E /* Main.storyboard in Resources */,
 			);
@@ -326,6 +349,7 @@
 				B2F7FFD125E473260038370E /* HomeVC.swift in Sources */,
 				B2130B6F25F310C5009BF749 /* ProductList.swift in Sources */,
 				B2130B6C25F30F47009BF749 /* Account.swift in Sources */,
+				BC75B94325F6E14E008E2DED /* AccountController.swift in Sources */,
 				B2F7006125E721B60038370E /* HomeController.swift in Sources */,
 				D3E5033125E9B0EE00F933FC /* AppDelegate.swift in Sources */,
 				B2F7005B25E721550038370E /* User.swift in Sources */,

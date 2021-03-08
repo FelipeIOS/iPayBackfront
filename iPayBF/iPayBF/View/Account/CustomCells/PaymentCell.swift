@@ -12,6 +12,7 @@ class PaymentCell: UITableViewCell {
 	// MARK: - IBOutlet
 	@IBOutlet weak var cardImageView: UIImageView!
 	@IBOutlet weak var paymentButton: UIButton!
+	@IBOutlet weak var totalValuelabel: UILabel!
 	
 	
 	// MARK: - Initialization
