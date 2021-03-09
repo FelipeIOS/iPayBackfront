@@ -18,9 +18,11 @@ class AccountVC: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		self.controller.loadAccountMock { (account) in
-			print(account.totalValue)
+		self.controller.loadAccount { (response) in
+			print("loadAccount================================")
 		}
+		
+
 	}
 	
 }
