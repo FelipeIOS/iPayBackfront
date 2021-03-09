@@ -10,23 +10,19 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PaymentCell" rowHeight="70" id="KGk-i7-Jjw" customClass="PaymentCell" customModule="iPayBF" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="394" height="70"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PaymentCell" rowHeight="114" id="KGk-i7-Jjw" customClass="PaymentCell" customModule="iPayBF" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="373" height="114"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="394" height="70"/>
+                <rect key="frame" x="0.0" y="0.0" width="373" height="114"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="credit-card" translatesAutoresizingMaskIntoConstraints="NO" id="Ha1-yL-3wt">
-                        <rect key="frame" x="15" y="9" width="52" height="53"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="53" id="HDY-hs-2Bk"/>
-                            <constraint firstAttribute="width" constant="52" id="SL8-lM-Gu2"/>
-                        </constraints>
-                    </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mw5-LA-lof">
-                        <rect key="frame" x="82" y="13" width="297" height="46"/>
+                        <rect key="frame" x="107" y="51.5" width="231" height="46"/>
                         <color key="backgroundColor" red="0.26462149639999999" green="0.6741649622" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="46" id="iX7-6o-YeX"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                         <color key="tintColor" red="0.26462149639999999" green="0.6741649622" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <state key="normal" title="pagar">
@@ -36,30 +32,52 @@
                             <action selector="tappedPaymentButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="0Ri-FY-c8F"/>
                         </connections>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor total: R$ 78,00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYG-2f-4YS">
+                        <rect key="frame" x="35" y="5" width="303" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="idZ-iK-sIU"/>
+                            <constraint firstAttribute="height" constant="35" id="w8V-68-Hji"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                        <color key="textColor" systemColor="systemBackgroundColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="credit-card" translatesAutoresizingMaskIntoConstraints="NO" id="Ha1-yL-3wt">
+                        <rect key="frame" x="35" y="48" width="52" height="53"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="52" id="N0i-Tl-0TW"/>
+                            <constraint firstAttribute="height" constant="53" id="ZEt-P9-Vaa"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <color key="backgroundColor" systemColor="labelColor"/>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="Mw5-LA-lof" secondAttribute="bottom" constant="13" id="Muo-Aj-6qW"/>
-                    <constraint firstItem="Ha1-yL-3wt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="Nd7-O3-hWO"/>
-                    <constraint firstItem="Mw5-LA-lof" firstAttribute="leading" secondItem="Ha1-yL-3wt" secondAttribute="trailing" constant="15" id="PEf-dC-qbH"/>
-                    <constraint firstItem="Mw5-LA-lof" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="UB7-Jv-kMR"/>
-                    <constraint firstAttribute="bottom" secondItem="Ha1-yL-3wt" secondAttribute="bottom" constant="9" id="aAE-iK-iYO"/>
-                    <constraint firstAttribute="trailing" secondItem="Mw5-LA-lof" secondAttribute="trailing" constant="15" id="tLc-Wc-cdc"/>
-                    <constraint firstItem="Ha1-yL-3wt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="yxK-g0-Sr9"/>
+                    <constraint firstItem="Mw5-LA-lof" firstAttribute="leading" secondItem="Ha1-yL-3wt" secondAttribute="trailing" constant="20" id="Ezz-nK-w7r"/>
+                    <constraint firstItem="Ha1-yL-3wt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="15" id="OPo-Th-WNH"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Mw5-LA-lof" secondAttribute="trailing" constant="15" id="U9A-dh-H2p"/>
+                    <constraint firstItem="Ha1-yL-3wt" firstAttribute="top" secondItem="vYG-2f-4YS" secondAttribute="bottom" constant="8" symbolic="YES" id="ceS-oQ-p6l"/>
+                    <constraint firstItem="Ha1-yL-3wt" firstAttribute="centerY" secondItem="Mw5-LA-lof" secondAttribute="centerY" id="mY5-ga-HaG"/>
+                    <constraint firstItem="vYG-2f-4YS" firstAttribute="trailing" secondItem="Mw5-LA-lof" secondAttribute="trailing" id="s1x-mP-14A"/>
+                    <constraint firstItem="vYG-2f-4YS" firstAttribute="leading" secondItem="Ha1-yL-3wt" secondAttribute="leading" id="xiS-yc-owQ"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Ha1-yL-3wt" secondAttribute="bottom" constant="2" id="y3J-GE-Clf"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="cardImageView" destination="Ha1-yL-3wt" id="UEk-k6-8AS"/>
                 <outlet property="paymentButton" destination="Mw5-LA-lof" id="81V-pG-Ew2"/>
+                <outlet property="totalValueLabel" destination="vYG-2f-4YS" id="q1i-mM-7Y8"/>
             </connections>
-            <point key="canvasLocation" x="-67" y="-92"/>
+            <point key="canvasLocation" x="-97.826086956521749" y="-67.633928571428569"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="credit-card" width="128" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

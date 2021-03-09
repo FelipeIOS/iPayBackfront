@@ -97,14 +97,6 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if self.controller.checkUserPayer(indexPath: indexPath) {
-
-           // self.alert?.showAlert(titulo: "Parabéns!", mensagem: "Você foi o sorteado da vez, pague a conta!", tituloBotao: "Foge não!")
-//            self.alert?.detailAlert(titulo: "Parabéns!", mensagem: "Você foi o sorteado da vez, pague a conta!", completion: {_ in
-//
-//                self.controller.removeAllUsers()
-//                self.usersTableView.reloadData()
-//                self.blockedSortButton()
-//            })
             
             self.alert?.detailAlert(titulo: "", mensagem: "", completion: { (success) in
                 

@@ -3,4 +3,54 @@
    uuid = "ACAC21AE-D2D0-49E1-8537-4B3748E6B2A2"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A36F11D0-DEBC-4D96-8116-1856A1C0AD27"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iPayBF/Controller/Account/AccountController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "loadAccountMock(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A36F11D0-DEBC-4D96-8116-1856A1C0AD27 - faf7ae58f06256b6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iPayBF.AccountController.loadAccountMock(completion: (iPayBF.Account) -&gt; ()) -&gt; ()"
+                  moduleName = "iPayBF"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wagnerongarojunior/iPayBackfront/iPayBF/iPayBF/Controller/Account/AccountController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "1090">
+               </Location>
+               <Location
+                  uuid = "A36F11D0-DEBC-4D96-8116-1856A1C0AD27 - faf7ae58f06256b6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iPayBF.AccountController.loadAccountMock(completion: (iPayBF.Account) -&gt; ()) -&gt; ()"
+                  moduleName = "iPayBF"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wagnerongarojunior/iPayBackfront/iPayBF/iPayBF/Controller/Account/AccountController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "1211">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

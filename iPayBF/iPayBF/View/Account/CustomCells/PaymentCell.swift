@@ -11,6 +11,7 @@ class PaymentCell: UITableViewCell {
 
     @IBOutlet weak var cardImageView: UIImageView!
     @IBOutlet weak var paymentButton: UIButton!
+    @IBOutlet weak var totalValueLabel: UILabel!
     
     
     override func awakeFromNib() {
