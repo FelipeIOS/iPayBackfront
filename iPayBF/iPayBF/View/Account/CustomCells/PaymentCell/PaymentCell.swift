@@ -9,6 +9,7 @@ import UIKit
 
 class PaymentCell: UITableViewCell {
 
+    @IBOutlet weak var totalValueLabel: UILabel!
     @IBOutlet weak var cardImageView: UIImageView!
     
     @IBOutlet weak var paymentButton: UIButton!
