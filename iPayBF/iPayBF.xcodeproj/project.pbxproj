@@ -15,6 +15,8 @@
 		B2130B6925F302FF009BF749 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2130B6725F302FF009BF749 /* ProductCell.xib */; };
 		B2130B6C25F30F47009BF749 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2130B6B25F30F47009BF749 /* Account.swift */; };
 		B2130B6F25F310C5009BF749 /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2130B6E25F310C5009BF749 /* ProductList.swift */; };
+		B2130BC425F6DB75009BF749 /* Account.json in Resources */ = {isa = PBXBuildFile; fileRef = B2130BC325F6DB75009BF749 /* Account.json */; };
+		B2130BCA25F6E148009BF749 /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2130BC925F6E148009BF749 /* AccountController.swift */; };
 		B2A3E04825EDA93400D7FB4E /* EmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A3E04625EDA93400D7FB4E /* EmptyCell.swift */; };
 		B2A3E04925EDA93400D7FB4E /* EmptyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2A3E04725EDA93400D7FB4E /* EmptyCell.xib */; };
 		B2F7005725E70D4F0038370E /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F7005625E70D4F0038370E /* UserCell.swift */; };
@@ -38,6 +40,8 @@
 		B2130B6725F302FF009BF749 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 		B2130B6B25F30F47009BF749 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		B2130B6E25F310C5009BF749 /* ProductList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductList.swift; sourceTree = "<group>"; };
+		B2130BC325F6DB75009BF749 /* Account.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Account.json; sourceTree = "<group>"; };
+		B2130BC925F6E148009BF749 /* AccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
 		B2A3E04625EDA93400D7FB4E /* EmptyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCell.swift; sourceTree = "<group>"; };
 		B2A3E04725EDA93400D7FB4E /* EmptyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyCell.xib; sourceTree = "<group>"; };
 		B2F7005625E70D4F0038370E /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
@@ -113,6 +117,22 @@
 			path = CustomCells;
 			sourceTree = "<group>";
 		};
+		B2130BC725F6E119009BF749 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B2F7006025E721B60038370E /* HomeController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B2130BC825F6E122009BF749 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				B2130BC925F6E148009BF749 /* AccountController.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
 		B2A3E04B25EDA94300D7FB4E /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +145,7 @@
 		B2F7005925E721400038370E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B2130BC325F6DB75009BF749 /* Account.json */,
 				B2F7005A25E721550038370E /* User.swift */,
 				B2130B6B25F30F47009BF749 /* Account.swift */,
 				B2130B6E25F310C5009BF749 /* ProductList.swift */,
@@ -135,7 +156,8 @@
 		B2F7005E25E721930038370E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B2F7006025E721B60038370E /* HomeController.swift */,
+				B2130BC825F6E122009BF749 /* Account */,
+				B2130BC725F6E119009BF749 /* Home */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -265,6 +287,7 @@
 				B2A3E04925EDA93400D7FB4E /* EmptyCell.xib in Resources */,
 				B2F7FFD625E473280038370E /* Assets.xcassets in Resources */,
 				B2130B6925F302FF009BF749 /* ProductCell.xib in Resources */,
+				B2130BC425F6DB75009BF749 /* Account.json in Resources */,
 				B2130B6425F2F727009BF749 /* PaymentCell.xib in Resources */,
 				B2F7FFD425E473260038370E /* Main.storyboard in Resources */,
 			);
@@ -326,6 +349,7 @@
 				B2F7FFD125E473260038370E /* HomeVC.swift in Sources */,
 				B2130B6F25F310C5009BF749 /* ProductList.swift in Sources */,
 				B2130B6C25F30F47009BF749 /* Account.swift in Sources */,
+				B2130BCA25F6E148009BF749 /* AccountController.swift in Sources */,
 				B2F7006125E721B60038370E /* HomeController.swift in Sources */,
 				D3E5033125E9B0EE00F933FC /* AppDelegate.swift in Sources */,
 				B2F7005B25E721550038370E /* User.swift in Sources */,

@@ -25,6 +25,7 @@ class ProductList: Codable {
 // MARK: ProductList convenience initializers and mutators
 
 extension ProductList {
+    
     convenience init(data: Data) throws {
         let me = try newJSONDecoder().decode(ProductList.self, from: data)
         self.init(productID: me.productID, productType: me.productType, date: me.date, name: me.name, price: me.price, quantity: me.quantity)
