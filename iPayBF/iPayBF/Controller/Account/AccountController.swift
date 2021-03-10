@@ -21,32 +21,12 @@ class AccountController {
 		
 		// Chamada de Request
 		AF.request(urlRequest).responseJSON { (response) in
-			
-			print("Response.Response: \(String(describing: response.response))")
-			print("Response.Result: \(response.result)")
-			
+		
 			guard let data = response.data else { return }
 			
 			do {
-
 				let account: Account = try Account(data: data)
-				let productList: [ProductList] = account.productList
-				
 				completion(account)
-				
-				print("Product List: \(account.productList)")
-				print("Lista Produto: \(productList)")
-				
-				for product in productList {
-					print(product.productID)
-					print(product.productType)
-					print(product.name)
-					print(product.price)
-					print(product.quantity)
-				}
-				
-				print("Total: \(account.totalValue)")
-				
 			} catch {
 				print("Erro no Accout")
 				print(error)
