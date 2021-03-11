@@ -17,6 +17,7 @@
 		B2130B6F25F310C5009BF749 /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2130B6E25F310C5009BF749 /* ProductList.swift */; };
 		B2130BC425F6DB75009BF749 /* Account.json in Resources */ = {isa = PBXBuildFile; fileRef = B2130BC325F6DB75009BF749 /* Account.json */; };
 		B2130BCA25F6E148009BF749 /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2130BC925F6E148009BF749 /* AccountController.swift */; };
+		B2130BEC25F9A118009BF749 /* AccountNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2130BEB25F9A118009BF749 /* AccountNetwork.swift */; };
 		B2A3E04825EDA93400D7FB4E /* EmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A3E04625EDA93400D7FB4E /* EmptyCell.swift */; };
 		B2A3E04925EDA93400D7FB4E /* EmptyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2A3E04725EDA93400D7FB4E /* EmptyCell.xib */; };
 		B2F7005725E70D4F0038370E /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F7005625E70D4F0038370E /* UserCell.swift */; };
@@ -42,6 +43,7 @@
 		B2130B6E25F310C5009BF749 /* ProductList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductList.swift; sourceTree = "<group>"; };
 		B2130BC325F6DB75009BF749 /* Account.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Account.json; sourceTree = "<group>"; };
 		B2130BC925F6E148009BF749 /* AccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
+		B2130BEB25F9A118009BF749 /* AccountNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountNetwork.swift; sourceTree = "<group>"; };
 		B2A3E04625EDA93400D7FB4E /* EmptyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCell.swift; sourceTree = "<group>"; };
 		B2A3E04725EDA93400D7FB4E /* EmptyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyCell.xib; sourceTree = "<group>"; };
 		B2F7005625E70D4F0038370E /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 		B2130B5625F2F185009BF749 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				B2130BEB25F9A118009BF749 /* AccountNetwork.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2130B6325F2F727009BF749 /* PaymentCell.swift in Sources */,
+				B2130BEC25F9A118009BF749 /* AccountNetwork.swift in Sources */,
 				B2130B6825F302FF009BF749 /* ProductCell.swift in Sources */,
 				B2F7005725E70D4F0038370E /* UserCell.swift in Sources */,
 				B2A3E04825EDA93400D7FB4E /* EmptyCell.swift in Sources */,

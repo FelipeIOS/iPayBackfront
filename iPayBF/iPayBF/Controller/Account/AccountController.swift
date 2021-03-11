@@ -29,7 +29,7 @@ class AccountController {
             return _totalValue
         }
         
-        return 0 
+        return 0
     }
     
     func checkIfLastIndex(indexPath: IndexPath) -> Bool {
@@ -40,68 +40,20 @@ class AccountController {
         return false
     }
     
-
-    func loadAccount(completion:@escaping(_ success: Bool, _ error: NSError?) -> Void) {
-        
-        let urlString: String = "https://run.mocky.io/v3/82375610-cc6d-4261-9581-7ec9f0ee1fbe"
-        
-        
-        guard let url: URL = URL(string: urlString) else {return}
-        var urlRequest: URLRequest = URLRequest(url: url)
-        urlRequest.httpMethod = "GET"
-        urlRequest.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
-        
-        
-        AF.request(urlRequest).responseJSON { (response) in
+    func loadAccount(completion:@escaping(_ success: Bool, _ error: NSError?) -> Void){
+    
+        AccountWorker().loadAccount { (account, error) in
             
-            print("response.response==========>")
-            print(response.response)
-            
-            if response.response?.statusCode == 200 {
-                
-                do {
-                    if let _data = response.data {
-                        let account: Account = try Account(data: _data)
-                        self.account = account
-                        completion(true, nil)
-                    }
-                }catch{
-                    print(error)
-                    completion(false, error as NSError)
-                }
+            if account != nil {
+                self.account = account
+                completion(true, nil)
             }else{
-                completion(false, NSError())
+                completion(false, error)
             }
-            
-            print("response.result==========>")
-            print(response.result)
-        
-            
         }
-        
     }
     
-    func loadAccountMock(completion:@escaping(_ account: Account) -> Void) {
-        
-        if let path = Bundle.main.path(forResource: "Account", ofType: "json") {
-            
-            do {
-                
-                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                
-                let account: Account = try Account(data: data)
-                
-                completion(account)
-                
-            }catch{
-                
-                print(error)
-            
-            }
-            
-            
-        }
-        
+    func loadAccountMock(completion:@escaping(_ success:  Bool, _ error: NSError?) -> Void) {
         
         
     }
