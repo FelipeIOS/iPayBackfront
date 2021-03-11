@@ -2,11 +2,10 @@
 //  ProductList.swift
 //  iPayBF
 //
-//  Created by Wagner Ongaro Junior on 05/03/21.
+//  Created by Felipe Miranda on 05/03/21.
 //
 
 import Foundation
-
 // MARK: - ProductList
 class ProductList: Codable {
     let productID, productType, date, name: String
@@ -26,6 +25,7 @@ class ProductList: Codable {
 // MARK: ProductList convenience initializers and mutators
 
 extension ProductList {
+    
     convenience init(data: Data) throws {
         let me = try newJSONDecoder().decode(ProductList.self, from: data)
         self.init(productID: me.productID, productType: me.productType, date: me.date, name: me.name, price: me.price, quantity: me.quantity)

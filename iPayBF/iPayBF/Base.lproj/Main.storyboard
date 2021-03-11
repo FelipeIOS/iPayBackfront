@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Gb-aa-96n">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vjD-if-tah">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -120,38 +120,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-625" y="38"/>
+            <point key="canvasLocation" x="-310" y="32"/>
         </scene>
         <!--AccountVC-->
-        <scene sceneID="gd9-Tb-ZkG">
+        <scene sceneID="wy0-Rg-EEi">
             <objects>
-                <viewController id="8Gb-aa-96n" customClass="AccountVC" customModule="iPayBF" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="JKk-h7-s9o">
+                <viewController id="vjD-if-tah" customClass="AccountVC" customModule="iPayBF" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VZR-c7-Diw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0vc-4H-ffb">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z5B-6R-KG2">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="Vgg-40-xXV"/>
+                        <viewLayoutGuide key="safeArea" id="zij-eV-JsQ"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="0vc-4H-ffb" firstAttribute="leading" secondItem="Vgg-40-xXV" secondAttribute="leading" id="1qE-0N-vkC"/>
-                            <constraint firstItem="0vc-4H-ffb" firstAttribute="trailing" secondItem="Vgg-40-xXV" secondAttribute="trailing" id="4BF-yc-OZ2"/>
-                            <constraint firstItem="Vgg-40-xXV" firstAttribute="bottom" secondItem="0vc-4H-ffb" secondAttribute="bottom" id="9wz-Ii-Uwd"/>
-                            <constraint firstItem="0vc-4H-ffb" firstAttribute="top" secondItem="Vgg-40-xXV" secondAttribute="top" id="OCH-IR-UgE"/>
+                            <constraint firstItem="Z5B-6R-KG2" firstAttribute="leading" secondItem="zij-eV-JsQ" secondAttribute="leading" id="7yH-AH-lAB"/>
+                            <constraint firstItem="Z5B-6R-KG2" firstAttribute="top" secondItem="zij-eV-JsQ" secondAttribute="top" id="TmW-GF-vpS"/>
+                            <constraint firstItem="zij-eV-JsQ" firstAttribute="bottom" secondItem="Z5B-6R-KG2" secondAttribute="bottom" id="vc1-36-1GO"/>
+                            <constraint firstItem="Z5B-6R-KG2" firstAttribute="trailing" secondItem="zij-eV-JsQ" secondAttribute="trailing" id="yqW-II-VR5"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="P7D-do-TUn"/>
                     <connections>
-                        <outlet property="accountTableView" destination="0vc-4H-ffb" id="fnL-aa-zZv"/>
+                        <outlet property="accountTableView" destination="Z5B-6R-KG2" id="O1s-HG-o77"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5mm-HN-u3o" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T9E-F1-xCk" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="155.07246376811597" y="37.5"/>
+            <point key="canvasLocation" x="479.71014492753625" y="26.785714285714285"/>
         </scene>
     </scenes>
     <resources>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "B28BD777-AB5D-404D-81E7-7922EC55EAA7"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E56C0A0A-B286-4CE5-960F-E8EBB699B6E8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iPayBF/Controller/Account/AccountController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "loadAccountMock(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0F4CE247-0BC8-42A5-8815-37430DD4ABCA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iPayBF/View/Account/AccountVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0F4CE247-0BC8-42A5-8815-37430DD4ABCA - c92625cb0b7f3ebf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iPayBF.AccountVC.viewDidLoad() -&gt; ()"
+                  moduleName = "iPayBF"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/felipemiranda/iPayBackfront/iPayBF/iPayBF/View/Account/AccountVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "107">
+               </Location>
+               <Location
+                  uuid = "0F4CE247-0BC8-42A5-8815-37430DD4ABCA - a717322dca3db5ec"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (iPayBF.Account) -&gt; () in iPayBF.AccountVC.viewDidLoad() -&gt; ()"
+                  moduleName = "iPayBF"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/felipemiranda/iPayBackfront/iPayBF/iPayBF/View/Account/AccountVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

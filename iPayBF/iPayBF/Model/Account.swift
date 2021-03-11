@@ -1,9 +1,4 @@
-//
-//  Account.swift
-//  iPayBF
-//
-//  Created by Wagner Ongaro Junior on 05/03/21.
-//
+
 
 import Foundation
 
@@ -55,3 +50,4 @@ extension Account {
         return String(data: try self.jsonData(), encoding: encoding)
     }
 }
+
