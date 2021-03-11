@@ -64,12 +64,10 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
-                <outlet property="nameLabel" destination="YWJ-5w-v0b" id="fq4-9p-qi2"/>
-                <outlet property="priceLabel" destination="K76-I6-93W" id="Gwa-pW-bs8"/>
-                <outlet property="productImageView" destination="4Pa-oS-h3t" id="tar-bT-jge"/>
-                <outlet property="productLabel" destination="YWJ-5w-v0b" id="TVg-kd-JYp"/>
-                <outlet property="qtdLabel" destination="Uuz-yc-E1n" id="gEO-o4-ReP"/>
-                <outlet property="userImageView" destination="4Pa-oS-h3t" id="9e3-uF-6kN"/>
+                <outlet property="priceLabel" destination="K76-I6-93W" id="JsS-bY-zU6"/>
+                <outlet property="productImageView" destination="4Pa-oS-h3t" id="jKM-o0-cqv"/>
+                <outlet property="productLabel" destination="YWJ-5w-v0b" id="7Ac-CD-Usy"/>
+                <outlet property="qtdLabel" destination="Uuz-yc-E1n" id="NLE-jH-0uI"/>
             </connections>
             <point key="canvasLocation" x="-42" y="13"/>
         </tableViewCell>

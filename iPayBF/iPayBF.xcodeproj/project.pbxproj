@@ -129,6 +129,7 @@
 		B2F7005925E721400038370E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BC75B93C25F6DE2B008E2DED /* Account.json */,
 				B2F7005A25E721550038370E /* User.swift */,
 				B2130B6B25F30F47009BF749 /* Account.swift */,
 				B2130B6E25F310C5009BF749 /* ProductList.swift */,
@@ -176,7 +177,6 @@
 			isa = PBXGroup;
 			children = (
 				BCBB71B225F868C200CBA623 /* Delegate */,
-				BC75B93C25F6DE2B008E2DED /* Account.json */,
 				B2130B5625F2F185009BF749 /* Network */,
 				B2F7005E25E721930038370E /* Controller */,
 				D3E5033525E9CA6400F933FC /* AlertController */,

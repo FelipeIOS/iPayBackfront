@@ -9,10 +9,12 @@ import UIKit
 
 class AccountVC: UIViewController {
 	
+	// MARK: - IBOutlet
 	@IBOutlet weak var usersTableView: UITableView!
 	
+	// MARK: - Variable
 	var controller: AccountController = AccountController()
-	var account: Account?
+	
 	
 	
 	// MARK: - Initialization
@@ -20,21 +22,28 @@ class AccountVC: UIViewController {
 		super.viewDidLoad()
 		
 		getLoadAccount()
-		configTableView()
 	}
 	
 	// MARK: - Function
 	private func configTableView() {
-		print(#function)
 		self.usersTableView.delegate = self
 		self.usersTableView.dataSource = self
+		self.usersTableView.register(ProductCell.nib(),
+											  forCellReuseIdentifier: ProductCell.identifier)
+		self.usersTableView.register(PaymentCell.nib(),
+											  forCellReuseIdentifier: PaymentCell.identifier)
+		
+		self.usersTableView.reloadData()
 	}
 	
 	private func getLoadAccount() {
-		self.controller.loadAccount { (_account) in
-			self.account = _account
-			print(#function)
-			self.usersTableView.reloadData()
+		
+		self.controller.loadAccount { (success, error) in
+			
+			if success {
+				self.configTableView()
+			}
+			
 		}
 		
 	}
@@ -46,11 +55,40 @@ class AccountVC: UIViewController {
 extension AccountVC: UITableViewDelegate, UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return self.account?.productList.count ?? 0
+		return self.controller.getCount()
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		return UITableViewCell()
+		
+		if self.controller.checkIfLastIndex(indexPath: indexPath) {
+//			guard let product = self.controller.getProduct(at: indexPath.row) else { return UITableViewCell() }
+			
+			guard let cell = tableView.dequeueReusableCell(withIdentifier: PaymentCell.identifier,
+																		  for: indexPath) as? PaymentCell
+			else { return UITableViewCell() }
+			
+			cell.setupCell(total: self.controller.getTotal(), delegate: self)
+			return cell
+		}
+		
+		guard let product = self.controller.getProduct(at: indexPath.row) else { return UITableViewCell() }
+		
+		guard let cell = tableView.dequeueReusableCell(withIdentifier: ProductCell.identifier,
+																	  for: indexPath) as? ProductCell
+		else { return UITableViewCell() }
+		
+		cell.setupCell(product: product)
+		return cell
+	}
+	
+}
+
+
+// MARK: - Extension PaymentCell
+extension AccountVC: PaymentCellProtocol {
+	
+	func tappedPaymentButton() {
+		print(#function)
 	}
 	
 }
