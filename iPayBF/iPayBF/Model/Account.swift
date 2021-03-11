@@ -4,10 +4,10 @@ import Foundation
 
 // MARK: - Account
 class Account: Codable {
-    let totalValue: Int
+    let totalValue: Float
     let productList: [ProductList]
 
-    init(totalValue: Int, productList: [ProductList]) {
+    init(totalValue: Float, productList: [ProductList]) {
         self.totalValue = totalValue
         self.productList = productList
     }
@@ -33,7 +33,7 @@ extension Account {
     }
 
     func with(
-        totalValue: Int? = nil,
+        totalValue: Float? = nil,
         productList: [ProductList]? = nil
     ) -> Account {
         return Account(

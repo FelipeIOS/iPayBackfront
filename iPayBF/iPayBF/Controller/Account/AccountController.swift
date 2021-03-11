@@ -13,11 +13,31 @@ class AccountController {
     private var account: Account?
     
     var count: Int {
-        return self.account?.productList.count ?? 0
+        
+        let count = (self.account?.productList.count ?? 0) + 1
+
+        return count
     }
     
     func loadCurrentProduct(indexPath: IndexPath) -> ProductList? {
         return self.account?.productList[indexPath.row]
+    }
+    
+    func loadTotalValue() -> Float {
+        
+        if let _totalValue = self.account?.totalValue {
+            return _totalValue
+        }
+        
+        return 0 
+    }
+    
+    func checkIfLastIndex(indexPath: IndexPath) -> Bool {
+        
+        if indexPath.row == self.account?.productList.count ?? 0 {
+            return true
+        }
+        return false
     }
     
 

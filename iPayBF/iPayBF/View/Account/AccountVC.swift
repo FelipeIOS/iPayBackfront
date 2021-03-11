@@ -48,11 +48,29 @@ extension AccountVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell: ProductCell? = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as? ProductCell
-        
-        cell?.setup(value: self.controller.loadCurrentProduct(indexPath: indexPath))
-        
-        return cell ?? UITableViewCell()
-    }
+        if self.controller.checkIfLastIndex(indexPath: indexPath) {
+           
+            let cell: PaymentCell? = tableView.dequeueReusableCell(withIdentifier: "PaymentCell", for: indexPath) as? PaymentCell
+            
+            cell?.setup(value: self.controller.loadTotalValue(), delegate: self)
 
+            return cell ?? UITableViewCell()
+        }else{
+            
+            let cell: ProductCell? = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as? ProductCell
+            
+            cell?.setup(value: self.controller.loadCurrentProduct(indexPath: indexPath))
+        
+            return cell ?? UITableViewCell()
+        }
+        
+    }
+}
+
+
+extension AccountVC: PaymentCellProtocol {
+    
+    func tappedPaymentButton() {
+        print("AccountVC: PaymentCellProtocol: tappedPaymentButton")
+    }
 }
