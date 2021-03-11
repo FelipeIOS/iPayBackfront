@@ -10,15 +10,49 @@ import UIKit
 class AccountVC: UIViewController {
 
     private var controller: AccountController = AccountController()
+    @IBOutlet weak var accountTableView: UITableView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.controller.loadAccount { (response) in
+        self.accountTableView.register(UINib(nibName: "PaymentCell", bundle: nil), forCellReuseIdentifier: "PaymentCell")
+        self.accountTableView.register(UINib(nibName: "ProductCell", bundle: nil), forCellReuseIdentifier: "ProductCell")
+        
+        self.controller.loadAccount { (success, error) in
             
-            
+            if  success {
+                self.loadTableView()
+            }
+                
         }
         // Do any additional setup after loading the view.
+    }
+
+    private func loadTableView() {
+        
+        self.accountTableView.delegate = self
+        self.accountTableView.dataSource = self
+        self.accountTableView.reloadData()
+        
+        print("loadTableView")
+    }
+
+}
+
+extension AccountVC: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.controller.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell: ProductCell? = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as? ProductCell
+        
+        cell?.setup(value: self.controller.loadCurrentProduct(indexPath: indexPath))
+        
+        return cell ?? UITableViewCell()
     }
 
 }

@@ -144,6 +144,9 @@
                             <constraint firstItem="Z5B-6R-KG2" firstAttribute="trailing" secondItem="zij-eV-JsQ" secondAttribute="trailing" id="yqW-II-VR5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="accountTableView" destination="Z5B-6R-KG2" id="O1s-HG-o77"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T9E-F1-xCk" sceneMemberID="firstResponder"/>
             </objects>
