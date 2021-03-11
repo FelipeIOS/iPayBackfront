@@ -145,6 +145,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="P7D-do-TUn"/>
+                    <connections>
+                        <outlet property="accountTableView" destination="0vc-4H-ffb" id="fnL-aa-zZv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5mm-HN-u3o" sceneMemberID="firstResponder"/>
             </objects>
