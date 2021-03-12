@@ -39,11 +39,9 @@ class AccountVC: UIViewController {
 	private func getLoadAccount() {
 		
 		self.controller.loadAccount { (success, error) in
-			
 			if success {
 				self.configTableView()
 			}
-			
 		}
 		
 	}
@@ -60,9 +58,7 @@ extension AccountVC: UITableViewDelegate, UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		
-		if self.controller.checkIfLastIndex(indexPath: indexPath) {
-//			guard let product = self.controller.getProduct(at: indexPath.row) else { return UITableViewCell() }
-			
+		if self.controller.checkIfLastIndex(indexPath: indexPath) {			
 			guard let cell = tableView.dequeueReusableCell(withIdentifier: PaymentCell.identifier,
 																		  for: indexPath) as? PaymentCell
 			else { return UITableViewCell() }

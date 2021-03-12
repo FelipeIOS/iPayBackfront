@@ -15,7 +15,7 @@ class AccountController {
 	
 	// MARK: - Function
 	
-	func addAccount(account: Account) {
+	func addAccount(account: Account?) {
 		self.account = account
 	}
 	
@@ -42,11 +42,28 @@ class AccountController {
 	
 	func loadAccount(completion: @escaping(_ success: Bool, _ error: NSError?) -> Void) {
 		
-		
+		AccountWorker().loadAccount { (conta, error) in
+			if conta == nil {
+				completion(false, nil)
+			} else {
+				self.addAccount(account: conta)
+				completion(true, nil)
+			}
+		}
 		
 	}
 	
 	func loadAccountMock(completion: @escaping(_ success: Bool, _ error: NSError?) -> Void) {
+		
+		AccountWorker().loadAccountMock { (conta, error) in
+			if conta == nil {
+				completion(false, error)
+			} else {
+				self.addAccount(account: conta)
+				completion(true, nil)
+			}
+		}
+		
 	}
 	
 }
