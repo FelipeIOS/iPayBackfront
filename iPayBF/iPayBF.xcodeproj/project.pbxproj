@@ -27,6 +27,12 @@
 		B2F7FFD425E473260038370E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F7FFD225E473260038370E /* Main.storyboard */; };
 		B2F7FFD625E473280038370E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2F7FFD525E473280038370E /* Assets.xcassets */; };
 		B2F7FFD925E473280038370E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F7FFD725E473280038370E /* LaunchScreen.storyboard */; };
+		D33B5BF025FE9C02004D1EB2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D33B5BEF25FE9C02004D1EB2 /* GoogleService-Info.plist */; };
+		D33C59B325FEA0920017CDE6 /* CadastroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33C59B225FEA0920017CDE6 /* CadastroVC.swift */; };
+		D33C59B625FEA0A70017CDE6 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33C59B525FEA0A70017CDE6 /* LoginVC.swift */; };
+		D33C59B925FEA1DB0017CDE6 /* FirebaseNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33C59B825FEA1DB0017CDE6 /* FirebaseNetwork.swift */; };
+		D33C59BE25FEA5550017CDE6 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33C59BD25FEA5550017CDE6 /* LoginController.swift */; };
+		D33C59C725FEAE050017CDE6 /* CadastroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33C59C625FEAE050017CDE6 /* CadastroController.swift */; };
 		D3E5033125E9B0EE00F933FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E5032F25E9B0EE00F933FC /* AppDelegate.swift */; };
 		D3E5033225E9B0EE00F933FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E5033025E9B0EE00F933FC /* SceneDelegate.swift */; };
 		D3E5033725E9CA8900F933FC /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E5033625E9CA8900F933FC /* Alert.swift */; };
@@ -57,6 +63,12 @@
 		B2F7FFDA25E473280038370E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6365269A393193FBC2290EB /* Pods-iPayBF.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPayBF.debug.xcconfig"; path = "Target Support Files/Pods-iPayBF/Pods-iPayBF.debug.xcconfig"; sourceTree = "<group>"; };
 		CA410D166813BD283DC9F056 /* Pods-iPayBF.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPayBF.release.xcconfig"; path = "Target Support Files/Pods-iPayBF/Pods-iPayBF.release.xcconfig"; sourceTree = "<group>"; };
+		D33B5BEF25FE9C02004D1EB2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D33C59B225FEA0920017CDE6 /* CadastroVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroVC.swift; sourceTree = "<group>"; };
+		D33C59B525FEA0A70017CDE6 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		D33C59B825FEA1DB0017CDE6 /* FirebaseNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseNetwork.swift; sourceTree = "<group>"; };
+		D33C59BD25FEA5550017CDE6 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		D33C59C625FEAE050017CDE6 /* CadastroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroController.swift; sourceTree = "<group>"; };
 		D3E5032F25E9B0EE00F933FC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		D3E5033025E9B0EE00F933FC /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = SOURCE_ROOT; };
 		D3E5033625E9CA8900F933FC /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
@@ -87,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				B2130BEB25F9A118009BF749 /* AccountNetwork.swift */,
+				D33C59B825FEA1DB0017CDE6 /* FirebaseNetwork.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -159,6 +172,8 @@
 		B2F7005E25E721930038370E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D33C59C525FEADEA0017CDE6 /* Cadastro */,
+				D33C59BB25FEA5380017CDE6 /* Login */,
 				B2130BC825F6E122009BF749 /* Account */,
 				B2130BC725F6E119009BF749 /* Home */,
 			);
@@ -168,6 +183,8 @@
 		B2F7005F25E721990038370E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D33C59B025FEA06A0017CDE6 /* Login */,
+				D33C59AE25FEA0570017CDE6 /* Cadastro */,
 				B2130B5A25F2F4D9009BF749 /* Account */,
 				B2130B5925F2F4BE009BF749 /* Home */,
 			);
@@ -206,9 +223,42 @@
 				B2F7FFD225E473260038370E /* Main.storyboard */,
 				B2F7FFD525E473280038370E /* Assets.xcassets */,
 				B2F7FFD725E473280038370E /* LaunchScreen.storyboard */,
+				D33B5BEF25FE9C02004D1EB2 /* GoogleService-Info.plist */,
 				B2F7FFDA25E473280038370E /* Info.plist */,
 			);
 			path = iPayBF;
+			sourceTree = "<group>";
+		};
+		D33C59AE25FEA0570017CDE6 /* Cadastro */ = {
+			isa = PBXGroup;
+			children = (
+				D33C59B225FEA0920017CDE6 /* CadastroVC.swift */,
+			);
+			path = Cadastro;
+			sourceTree = "<group>";
+		};
+		D33C59B025FEA06A0017CDE6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D33C59B525FEA0A70017CDE6 /* LoginVC.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D33C59BB25FEA5380017CDE6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D33C59BD25FEA5550017CDE6 /* LoginController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D33C59C525FEADEA0017CDE6 /* Cadastro */ = {
+			isa = PBXGroup;
+			children = (
+				D33C59C625FEAE050017CDE6 /* CadastroController.swift */,
+			);
+			path = Cadastro;
 			sourceTree = "<group>";
 		};
 		D3E5033525E9CA6400F933FC /* AlertController */ = {
@@ -286,6 +336,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D33B5BF025FE9C02004D1EB2 /* GoogleService-Info.plist in Resources */,
 				B2F7FFD925E473280038370E /* LaunchScreen.storyboard in Resources */,
 				B2A3E04925EDA93400D7FB4E /* EmptyCell.xib in Resources */,
 				B2F7FFD625E473280038370E /* Assets.xcassets in Resources */,
@@ -345,14 +396,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D33C59BE25FEA5550017CDE6 /* LoginController.swift in Sources */,
 				B2130B6325F2F727009BF749 /* PaymentCell.swift in Sources */,
 				B2130BEC25F9A118009BF749 /* AccountNetwork.swift in Sources */,
 				B2130B6825F302FF009BF749 /* ProductCell.swift in Sources */,
+				D33C59C725FEAE050017CDE6 /* CadastroController.swift in Sources */,
 				B2F7005725E70D4F0038370E /* UserCell.swift in Sources */,
+				D33C59B625FEA0A70017CDE6 /* LoginVC.swift in Sources */,
 				B2A3E04825EDA93400D7FB4E /* EmptyCell.swift in Sources */,
+				D33C59B325FEA0920017CDE6 /* CadastroVC.swift in Sources */,
 				B2F7FFD125E473260038370E /* HomeVC.swift in Sources */,
 				B2130B6F25F310C5009BF749 /* ProductList.swift in Sources */,
 				B2130B6C25F30F47009BF749 /* Account.swift in Sources */,
+				D33C59B925FEA1DB0017CDE6 /* FirebaseNetwork.swift in Sources */,
 				B2130BCA25F6E148009BF749 /* AccountController.swift in Sources */,
 				B2F7006125E721B60038370E /* HomeController.swift in Sources */,
 				D3E5033125E9B0EE00F933FC /* AppDelegate.swift in Sources */,
@@ -513,7 +569,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = BackFront.iPayBF;
+				PRODUCT_BUNDLE_IDENTIFIER = BackFront.iPayBFJr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -532,7 +588,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = BackFront.iPayBF;
+				PRODUCT_BUNDLE_IDENTIFIER = BackFront.iPayBFJr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

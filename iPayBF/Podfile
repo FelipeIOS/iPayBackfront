@@ -9,4 +9,14 @@ target 'iPayBF' do
 
 	pod 'PopupDialog', '~> 1.1'
 	pod 'Alamofire', '~> 5.4'
+	pod 'Firebase'
+
+  	pod 'Firebase/Analytics'
+
+	pod 'Firebase/Database'
+
+	pod 'Firebase/Auth'	
+
+	pod 'Firebase/Storage'
+
 end
