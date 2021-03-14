@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3C5EE55111F90452BDCFE625 /* Pods_iPayBF.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46535D64901971553F83E15E /* Pods_iPayBF.framework */; };
+		9F16149225FE5BB600A0250A /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F16149125FE5BB600A0250A /* LoginVC.swift */; };
 		B2130B5C25F2F507009BF749 /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2130B5B25F2F507009BF749 /* AccountVC.swift */; };
 		B2130B6325F2F727009BF749 /* PaymentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2130B6125F2F727009BF749 /* PaymentCell.swift */; };
 		B2130B6425F2F727009BF749 /* PaymentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2130B6225F2F727009BF749 /* PaymentCell.xib */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		46535D64901971553F83E15E /* Pods_iPayBF.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPayBF.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F16149125FE5BB600A0250A /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		B2130B5B25F2F507009BF749 /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
 		B2130B6125F2F727009BF749 /* PaymentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCell.swift; sourceTree = "<group>"; };
 		B2130B6225F2F727009BF749 /* PaymentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentCell.xib; sourceTree = "<group>"; };
@@ -81,6 +83,14 @@
 				CA410D166813BD283DC9F056 /* Pods-iPayBF.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9F16149025FE5B8800A0250A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				9F16149125FE5BB600A0250A /* LoginVC.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		B2130B5625F2F185009BF749 /* Network */ = {
@@ -168,6 +178,7 @@
 		B2F7005F25E721990038370E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9F16149025FE5B8800A0250A /* Login */,
 				B2130B5A25F2F4D9009BF749 /* Account */,
 				B2130B5925F2F4BE009BF749 /* Home */,
 			);
@@ -355,6 +366,7 @@
 				B2130B6C25F30F47009BF749 /* Account.swift in Sources */,
 				B2130BCA25F6E148009BF749 /* AccountController.swift in Sources */,
 				B2F7006125E721B60038370E /* HomeController.swift in Sources */,
+				9F16149225FE5BB600A0250A /* LoginVC.swift in Sources */,
 				D3E5033125E9B0EE00F933FC /* AppDelegate.swift in Sources */,
 				B2F7005B25E721550038370E /* User.swift in Sources */,
 				D3E5033225E9B0EE00F933FC /* SceneDelegate.swift in Sources */,
