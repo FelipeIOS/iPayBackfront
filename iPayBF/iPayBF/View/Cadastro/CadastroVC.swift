@@ -12,7 +12,6 @@ class CadastroVC: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var senhaTextField: UITextField!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
        
@@ -26,7 +25,7 @@ class CadastroVC: UIViewController {
         CadastroController().createUser(email: email, senha: senha) { (email) in
             
             if email {
-            self.performSegue(withIdentifier: "segueHome", sender: self)
+            self.performSegue(withIdentifier: "segueLogin", sender: self)
             
             } else {
                 print("DEU RUIM 3!!!")

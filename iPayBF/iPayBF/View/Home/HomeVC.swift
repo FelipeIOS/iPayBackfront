@@ -106,6 +106,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
                     self.controller.removeAllUsers()
                     self.usersTableView.reloadData()
                     self.blockedSortButton()
+                    self.performSegue(withIdentifier: "segueConta", sender: self)
                 }
             })
             

@@ -29,7 +29,6 @@ class CadastroController {
         FirebaseNetwork().saveUser(email: email, senha: senha, uid: uid)
     }
     
-    
 }
 
 

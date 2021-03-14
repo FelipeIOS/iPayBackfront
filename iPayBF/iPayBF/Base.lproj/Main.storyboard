@@ -73,7 +73,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="mgo-2e-eaS" id="wet-Ex-aC4"/>
                         <outlet property="senhaTextField" destination="B7H-cA-UEk" id="v9o-H3-Arf"/>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="segueHome" id="0df-Tw-zaC"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="segueHome" modalPresentationStyle="fullScreen" id="0df-Tw-zaC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8GG-3a-uZH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -189,6 +189,7 @@
                         <outlet property="nameTextField" destination="vqy-2c-lxB" id="JBL-rY-fAC"/>
                         <outlet property="sortButton" destination="ItW-tJ-X3b" id="yP0-dP-AjA"/>
                         <outlet property="usersTableView" destination="srm-Xw-Xdp" id="CW5-Pa-YpP"/>
+                        <segue destination="vjD-if-tah" kind="presentation" identifier="segueConta" modalPresentationStyle="fullScreen" id="8un-7y-b3f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -249,7 +250,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="sK9-f2-i9g" id="px0-Ii-aF2"/>
                         <outlet property="senhaTextField" destination="rMM-dV-xZm" id="KdW-oc-uOI"/>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="segueHome" modalPresentationStyle="fullScreen" id="l9L-5i-uSB"/>
+                        <segue destination="J5L-5N-wM6" kind="presentation" identifier="segueLogin" modalPresentationStyle="fullScreen" id="YOH-VD-9ks"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D7w-eL-3pp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -287,9 +288,6 @@
             <point key="canvasLocation" x="465" y="31"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="l9L-5i-uSB"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="Image-1" width="512" height="512"/>
         <image name="card" width="128" height="128"/>
