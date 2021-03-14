@@ -6,9 +6,21 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginVC: UIViewController {
+    
 
+    @IBOutlet weak var emailTextField: UITextField!
+    
+    
+
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,14 +28,44 @@ class LoginVC: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func tappedLoginButton(_ sender: UIButton) {
+        
+        let autenticacao:Auth = Auth.auth()
+       
+        let email:String = self.emailTextField.text  ??  ""
+        let password:String = self.passwordTextField.text  ??  ""
+        
+        var validacao:Bool = false
+        
+        
+        
+        autenticacao.signIn(withEmail: email, password: password) { (usuario, error) in
+            
+            if error == nil {
+                
+                if usuario == nil {
+                    print("Tivemos algum problema inesperado, tente novamente")
+                } else {
+                    validacao = true
+                    print("Login feito com sucesso")
+                }
+                
+            } else {
+                print("Dados incorretos, verifique e tente novamente!!")
+            }
+            
+        }
+        
+        if validacao == true {
+            tappedLoginButton(<#T##sender: UIButton##UIButton#>)
+        }
+        
+        
+        
+        
+        
     }
-    */
+    
+    
 
 }

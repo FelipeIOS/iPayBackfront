@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3C5EE55111F90452BDCFE625 /* Pods_iPayBF.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46535D64901971553F83E15E /* Pods_iPayBF.framework */; };
 		9F16149225FE5BB600A0250A /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F16149125FE5BB600A0250A /* LoginVC.swift */; };
+		9F16149525FE635600A0250A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F16149425FE635600A0250A /* GoogleService-Info.plist */; };
+		9F88204625FE7D5000094A9E /* CadastroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F88204525FE7D5000094A9E /* CadastroVC.swift */; };
 		B2130B5C25F2F507009BF749 /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2130B5B25F2F507009BF749 /* AccountVC.swift */; };
 		B2130B6325F2F727009BF749 /* PaymentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2130B6125F2F727009BF749 /* PaymentCell.swift */; };
 		B2130B6425F2F727009BF749 /* PaymentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2130B6225F2F727009BF749 /* PaymentCell.xib */; };
@@ -36,6 +38,8 @@
 /* Begin PBXFileReference section */
 		46535D64901971553F83E15E /* Pods_iPayBF.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPayBF.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F16149125FE5BB600A0250A /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		9F16149425FE635600A0250A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9F88204525FE7D5000094A9E /* CadastroVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroVC.swift; sourceTree = "<group>"; };
 		B2130B5B25F2F507009BF749 /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
 		B2130B6125F2F727009BF749 /* PaymentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCell.swift; sourceTree = "<group>"; };
 		B2130B6225F2F727009BF749 /* PaymentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentCell.xib; sourceTree = "<group>"; };
@@ -91,6 +95,21 @@
 				9F16149125FE5BB600A0250A /* LoginVC.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		9F88203F25FE797F00094A9E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		9F88204425FE7D3400094A9E /* Cadastro */ = {
+			isa = PBXGroup;
+			children = (
+				9F88204525FE7D5000094A9E /* CadastroVC.swift */,
+			);
+			path = Cadastro;
 			sourceTree = "<group>";
 		};
 		B2130B5625F2F185009BF749 /* Network */ = {
@@ -169,6 +188,7 @@
 		B2F7005E25E721930038370E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9F88203F25FE797F00094A9E /* Login */,
 				B2130BC825F6E122009BF749 /* Account */,
 				B2130BC725F6E119009BF749 /* Home */,
 			);
@@ -178,6 +198,7 @@
 		B2F7005F25E721990038370E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9F88204425FE7D3400094A9E /* Cadastro */,
 				9F16149025FE5B8800A0250A /* Login */,
 				B2130B5A25F2F4D9009BF749 /* Account */,
 				B2130B5925F2F4BE009BF749 /* Home */,
@@ -217,6 +238,7 @@
 				B2F7FFD225E473260038370E /* Main.storyboard */,
 				B2F7FFD525E473280038370E /* Assets.xcassets */,
 				B2F7FFD725E473280038370E /* LaunchScreen.storyboard */,
+				9F16149425FE635600A0250A /* GoogleService-Info.plist */,
 				B2F7FFDA25E473280038370E /* Info.plist */,
 			);
 			path = iPayBF;
@@ -299,6 +321,7 @@
 			files = (
 				B2F7FFD925E473280038370E /* LaunchScreen.storyboard in Resources */,
 				B2A3E04925EDA93400D7FB4E /* EmptyCell.xib in Resources */,
+				9F16149525FE635600A0250A /* GoogleService-Info.plist in Resources */,
 				B2F7FFD625E473280038370E /* Assets.xcassets in Resources */,
 				B2130B6925F302FF009BF749 /* ProductCell.xib in Resources */,
 				B2130BC425F6DB75009BF749 /* Account.json in Resources */,
@@ -357,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2130B6325F2F727009BF749 /* PaymentCell.swift in Sources */,
+				9F88204625FE7D5000094A9E /* CadastroVC.swift in Sources */,
 				B2130BEC25F9A118009BF749 /* AccountNetwork.swift in Sources */,
 				B2130B6825F302FF009BF749 /* ProductCell.swift in Sources */,
 				B2F7005725E70D4F0038370E /* UserCell.swift in Sources */,
@@ -525,7 +549,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = BackFront.iPayBF;
+				PRODUCT_BUNDLE_IDENTIFIER = BackFront.iPayBFdanilo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -544,7 +568,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = BackFront.iPayBF;
+				PRODUCT_BUNDLE_IDENTIFIER = BackFront.iPayBFdanilo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
