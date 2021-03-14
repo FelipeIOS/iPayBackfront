@@ -37,7 +37,7 @@ class AccountWorker {
                     print(error)
                     completion(nil, error as NSError)
                 }
-            }else{
+            } else {
                 completion(nil, NSError())
             }
             
@@ -60,18 +60,10 @@ class AccountWorker {
                 
                 completion(account)
                 
-            }catch{
+            } catch {
                 
                 print(error)
-            
             }
-            
-            
         }
-        
-        
-        
     }
-    
-    
 }

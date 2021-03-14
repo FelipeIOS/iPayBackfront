@@ -54,8 +54,5 @@ class AccountController {
     }
     
     func loadAccountMock(completion:@escaping(_ success:  Bool, _ error: NSError?) -> Void) {
-        
-        
     }
-    
 }

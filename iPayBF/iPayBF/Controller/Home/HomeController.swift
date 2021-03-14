@@ -68,7 +68,7 @@ class HomeController {
             
             return true
             
-        }else{
+        } else {
             
             self.arrayUser.remove(at: indexPath.row)
             return false

@@ -8,7 +8,7 @@
 import UIKit
 
 class ProductCell: UITableViewCell {
-
+    
     @IBOutlet weak var productLabel: UILabel!
     @IBOutlet weak var qtdLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
@@ -19,10 +19,10 @@ class ProductCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
@@ -32,6 +32,14 @@ class ProductCell: UITableViewCell {
             self.productLabel.text = _value.name
             self.qtdLabel.text = String(_value.quantity)
             self.priceLabel.text = "R$\(_value.price)"
+            
+            if _value.productType == "BEBIDA"  {
+                self.productImageView.image = UIImage(named:"beer")
+            } else {
+                self.productImageView.image = UIImage(named:"food")
+            }
         }
     }
 }
+
+
