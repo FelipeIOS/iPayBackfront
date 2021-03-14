@@ -29,6 +29,8 @@ class HomeVC: UIViewController {
 		self.alert = Alert(controller: self)
 	}
 	
+	
+	// MARK: - Funtion
 	private func configTableView() {
 		self.usersTableView.dataSource = self
 		self.usersTableView.delegate = self
@@ -56,12 +58,20 @@ class HomeVC: UIViewController {
 		
 	}
 	
+	
+	// MARK: - IBAction
 	@IBAction func tappedSortButton(_ sender: UIButton) {
 		self.controller.sortUser()
 		self.sortButton.isUserInteractionEnabled = false
 		self.nameTextField.isUserInteractionEnabled = false
 		self.sortButton.alpha = 0.5
 	}
+	
+	@IBAction func tappedSignOutButton(_ sender: UIButton) {
+		LoginWorker().signOutFirebase()
+		self.dismiss(animated: true, completion: nil)
+	}
+	
 	
 }
 
@@ -108,6 +118,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
 					self.usersTableView.reloadData()
 					self.blockedSortButton()
 					self.nameTextField.isUserInteractionEnabled = true
+					self.performSegue(withIdentifier: "segueDetalhe", sender: self)
 				}
 			})
 			

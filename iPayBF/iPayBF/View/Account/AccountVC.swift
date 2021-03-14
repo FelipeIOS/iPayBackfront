@@ -85,6 +85,7 @@ extension AccountVC: PaymentCellProtocol {
 	
 	func tappedPaymentButton() {
 		print(#function)
+		self.dismiss(animated: true, completion: nil)
 	}
 	
 }

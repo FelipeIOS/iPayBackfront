@@ -29,6 +29,13 @@
 		BC75B94325F6E14E008E2DED /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC75B94225F6E14E008E2DED /* AccountController.swift */; };
 		BCBB71B425F868DB00CBA623 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBB71B325F868DB00CBA623 /* AppDelegate.swift */; };
 		BCBB71B725F868E800CBA623 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBB71B625F868E800CBA623 /* SceneDelegate.swift */; };
+		BCF18A4C25FE9FF500FDD31E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCF18A4B25FE9FF500FDD31E /* GoogleService-Info.plist */; };
+		BCF18A5025FEA09A00FDD31E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF18A4F25FEA09A00FDD31E /* LoginViewController.swift */; };
+		BCF18A5425FEA1C000FDD31E /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF18A5325FEA1C000FDD31E /* CadastroViewController.swift */; };
+		BCF18A5925FEA21500FDD31E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF18A5825FEA21500FDD31E /* LoginController.swift */; };
+		BCF18A5C25FEA3D300FDD31E /* LoginWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF18A5B25FEA3D300FDD31E /* LoginWorker.swift */; };
+		BCF18A8825FEAA0100FDD31E /* CadastroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF18A8725FEAA0100FDD31E /* CadastroController.swift */; };
+		BCF18A8C25FEAB8F00FDD31E /* CadastroWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF18A8B25FEAB8F00FDD31E /* CadastroWorker.swift */; };
 		D3E5033725E9CA8900F933FC /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E5033625E9CA8900F933FC /* Alert.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +65,13 @@
 		BC75B94225F6E14E008E2DED /* AccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
 		BCBB71B325F868DB00CBA623 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCBB71B625F868E800CBA623 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BCF18A4B25FE9FF500FDD31E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BCF18A4F25FEA09A00FDD31E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BCF18A5325FEA1C000FDD31E /* CadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
+		BCF18A5825FEA21500FDD31E /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		BCF18A5B25FEA3D300FDD31E /* LoginWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWorker.swift; sourceTree = "<group>"; };
+		BCF18A8725FEAA0100FDD31E /* CadastroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroController.swift; sourceTree = "<group>"; };
+		BCF18A8B25FEAB8F00FDD31E /* CadastroWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroWorker.swift; sourceTree = "<group>"; };
 		CA410D166813BD283DC9F056 /* Pods-iPayBF.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPayBF.release.xcconfig"; path = "Target Support Files/Pods-iPayBF/Pods-iPayBF.release.xcconfig"; sourceTree = "<group>"; };
 		D3E5033625E9CA8900F933FC /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +101,8 @@
 			isa = PBXGroup;
 			children = (
 				BC03879B25FAC60600EB56DE /* AccountWorker.swift */,
+				BCF18A5B25FEA3D300FDD31E /* LoginWorker.swift */,
+				BCF18A8B25FEAB8F00FDD31E /* CadastroWorker.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -143,6 +159,8 @@
 		B2F7005E25E721930038370E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BCF18A8625FEA9F500FDD31E /* Cadastro */,
+				BCF18A5725FEA20400FDD31E /* Login */,
 				BC75B94125F6E135008E2DED /* Account */,
 				BC75B94025F6E123008E2DED /* Home */,
 			);
@@ -152,6 +170,8 @@
 		B2F7005F25E721990038370E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BCF18A5225FEA1B000FDD31E /* Cadastro */,
+				BCF18A4E25FEA08800FDD31E /* Login */,
 				B2130B5A25F2F4D9009BF749 /* Account */,
 				B2130B5925F2F4BE009BF749 /* Home */,
 			);
@@ -190,6 +210,7 @@
 				B2F7FFD525E473280038370E /* Assets.xcassets */,
 				B2F7FFD725E473280038370E /* LaunchScreen.storyboard */,
 				B2F7FFDA25E473280038370E /* Info.plist */,
+				BCF18A4B25FE9FF500FDD31E /* GoogleService-Info.plist */,
 			);
 			path = iPayBF;
 			sourceTree = "<group>";
@@ -217,6 +238,38 @@
 				BCBB71B325F868DB00CBA623 /* AppDelegate.swift */,
 			);
 			path = Delegate;
+			sourceTree = "<group>";
+		};
+		BCF18A4E25FEA08800FDD31E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				BCF18A4F25FEA09A00FDD31E /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		BCF18A5225FEA1B000FDD31E /* Cadastro */ = {
+			isa = PBXGroup;
+			children = (
+				BCF18A5325FEA1C000FDD31E /* CadastroViewController.swift */,
+			);
+			path = Cadastro;
+			sourceTree = "<group>";
+		};
+		BCF18A5725FEA20400FDD31E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				BCF18A5825FEA21500FDD31E /* LoginController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		BCF18A8625FEA9F500FDD31E /* Cadastro */ = {
+			isa = PBXGroup;
+			children = (
+				BCF18A8725FEAA0100FDD31E /* CadastroController.swift */,
+			);
+			path = Cadastro;
 			sourceTree = "<group>";
 		};
 		D3E5033525E9CA6400F933FC /* AlertController */ = {
@@ -295,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2F7FFD925E473280038370E /* LaunchScreen.storyboard in Resources */,
+				BCF18A4C25FE9FF500FDD31E /* GoogleService-Info.plist in Resources */,
 				B2A3E04925EDA93400D7FB4E /* EmptyCell.xib in Resources */,
 				B2F7FFD625E473280038370E /* Assets.xcassets in Resources */,
 				B2130B6925F302FF009BF749 /* ProductCell.xib in Resources */,
@@ -355,8 +409,10 @@
 			files = (
 				BC03879C25FAC60600EB56DE /* AccountWorker.swift in Sources */,
 				B2130B6325F2F727009BF749 /* PaymentCell.swift in Sources */,
+				BCF18A8C25FEAB8F00FDD31E /* CadastroWorker.swift in Sources */,
 				B2130B6825F302FF009BF749 /* ProductCell.swift in Sources */,
 				B2F7005725E70D4F0038370E /* UserCell.swift in Sources */,
+				BCF18A8825FEAA0100FDD31E /* CadastroController.swift in Sources */,
 				BCBB71B425F868DB00CBA623 /* AppDelegate.swift in Sources */,
 				B2A3E04825EDA93400D7FB4E /* EmptyCell.swift in Sources */,
 				B2F7FFD125E473260038370E /* HomeVC.swift in Sources */,
@@ -365,8 +421,12 @@
 				B2130B6C25F30F47009BF749 /* Account.swift in Sources */,
 				BC75B94325F6E14E008E2DED /* AccountController.swift in Sources */,
 				B2F7006125E721B60038370E /* HomeController.swift in Sources */,
+				BCF18A5025FEA09A00FDD31E /* LoginViewController.swift in Sources */,
+				BCF18A5925FEA21500FDD31E /* LoginController.swift in Sources */,
 				B2F7005B25E721550038370E /* User.swift in Sources */,
+				BCF18A5425FEA1C000FDD31E /* CadastroViewController.swift in Sources */,
 				D3E5033725E9CA8900F933FC /* Alert.swift in Sources */,
+				BCF18A5C25FEA3D300FDD31E /* LoginWorker.swift in Sources */,
 				B2130B5C25F2F507009BF749 /* AccountVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -521,7 +581,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = BackFront.iPayBF;
+				PRODUCT_BUNDLE_IDENTIFIER = BackFront.iPayBF.Alexandre;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -540,7 +600,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = BackFront.iPayBF;
+				PRODUCT_BUNDLE_IDENTIFIER = BackFront.iPayBF.Alexandre;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
