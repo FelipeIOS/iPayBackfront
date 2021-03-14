@@ -15,9 +15,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "loadAccountMock(completion:)"
-            landmarkType = "7">
+            endingLineNumber = "74">
             <Locations>
                <Location
                   uuid = "A36F11D0-DEBC-4D96-8116-1856A1C0AD27 - faf7ae58f06256b6"

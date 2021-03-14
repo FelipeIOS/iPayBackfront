@@ -94,8 +94,8 @@
 		B2130B5925F2F4BE009BF749 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				B2A3E04B25EDA94300D7FB4E /* CustomCells */,
 				B2F7FFD025E473260038370E /* HomeVC.swift */,
+				B2A3E04B25EDA94300D7FB4E /* CustomCells */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -103,8 +103,8 @@
 		B2130B5A25F2F4D9009BF749 /* Account */ = {
 			isa = PBXGroup;
 			children = (
-				B2130B5F25F2F512009BF749 /* CustomCells */,
 				B2130B5B25F2F507009BF749 /* AccountVC.swift */,
+				B2130B5F25F2F512009BF749 /* CustomCells */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -195,9 +195,9 @@
 		B2F7FFCB25E473260038370E /* iPayBF */ = {
 			isa = PBXGroup;
 			children = (
-				B2130B5625F2F185009BF749 /* Network */,
 				D3E5032F25E9B0EE00F933FC /* AppDelegate.swift */,
 				D3E5033025E9B0EE00F933FC /* SceneDelegate.swift */,
+				B2130B5625F2F185009BF749 /* Network */,
 				B2F7005E25E721930038370E /* Controller */,
 				D3E5033525E9CA6400F933FC /* AlertController */,
 				B2F7005F25E721990038370E /* View */,

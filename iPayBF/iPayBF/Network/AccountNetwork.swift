@@ -45,7 +45,6 @@ class AccountWorker {
             print(response.result)
     
         }
-        
     }
     
     func loadAccountMock(completion:@escaping(_ account: Account) -> Void) {
@@ -65,13 +64,6 @@ class AccountWorker {
                 print(error)
             
             }
-            
-            
         }
-        
-        
-        
     }
-    
-    
 }
