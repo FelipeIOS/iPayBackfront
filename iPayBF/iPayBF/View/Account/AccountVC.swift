@@ -67,10 +67,11 @@ extension AccountVC: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-
+// PRAGMA MARK:PaymentCellProtocol
 extension AccountVC: PaymentCellProtocol {
     
     func tappedPaymentButton() {
+        
         print("AccountVC: PaymentCellProtocol: tappedPaymentButton")
     }
 }
