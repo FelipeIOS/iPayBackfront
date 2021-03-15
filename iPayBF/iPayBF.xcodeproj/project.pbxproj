@@ -11,6 +11,8 @@
 		9F16149225FE5BB600A0250A /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F16149125FE5BB600A0250A /* LoginVC.swift */; };
 		9F16149525FE635600A0250A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F16149425FE635600A0250A /* GoogleService-Info.plist */; };
 		9F88204625FE7D5000094A9E /* CadastroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F88204525FE7D5000094A9E /* CadastroVC.swift */; };
+		9F88204E25FE93B700094A9E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F88204D25FE93B700094A9E /* LoginController.swift */; };
+		9F88205125FE948800094A9E /* LoginNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F88205025FE948800094A9E /* LoginNetwork.swift */; };
 		B2130B5C25F2F507009BF749 /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2130B5B25F2F507009BF749 /* AccountVC.swift */; };
 		B2130B6325F2F727009BF749 /* PaymentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2130B6125F2F727009BF749 /* PaymentCell.swift */; };
 		B2130B6425F2F727009BF749 /* PaymentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2130B6225F2F727009BF749 /* PaymentCell.xib */; };
@@ -40,6 +42,8 @@
 		9F16149125FE5BB600A0250A /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		9F16149425FE635600A0250A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9F88204525FE7D5000094A9E /* CadastroVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroVC.swift; sourceTree = "<group>"; };
+		9F88204D25FE93B700094A9E /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		9F88205025FE948800094A9E /* LoginNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNetwork.swift; sourceTree = "<group>"; };
 		B2130B5B25F2F507009BF749 /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
 		B2130B6125F2F727009BF749 /* PaymentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCell.swift; sourceTree = "<group>"; };
 		B2130B6225F2F727009BF749 /* PaymentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentCell.xib; sourceTree = "<group>"; };
@@ -100,6 +104,7 @@
 		9F88203F25FE797F00094A9E /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				9F88204D25FE93B700094A9E /* LoginController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -116,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				B2130BEB25F9A118009BF749 /* AccountNetwork.swift */,
+				9F88205025FE948800094A9E /* LoginNetwork.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -390,8 +396,10 @@
 				B2130B6C25F30F47009BF749 /* Account.swift in Sources */,
 				B2130BCA25F6E148009BF749 /* AccountController.swift in Sources */,
 				B2F7006125E721B60038370E /* HomeController.swift in Sources */,
+				9F88205125FE948800094A9E /* LoginNetwork.swift in Sources */,
 				9F16149225FE5BB600A0250A /* LoginVC.swift in Sources */,
 				D3E5033125E9B0EE00F933FC /* AppDelegate.swift in Sources */,
+				9F88204E25FE93B700094A9E /* LoginController.swift in Sources */,
 				B2F7005B25E721550038370E /* User.swift in Sources */,
 				D3E5033225E9B0EE00F933FC /* SceneDelegate.swift in Sources */,
 				D3E5033725E9CA8900F933FC /* Alert.swift in Sources */,

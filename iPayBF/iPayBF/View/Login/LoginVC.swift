@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Firebase
+import Foundation
 
 class LoginVC: UIViewController {
     
@@ -18,48 +18,68 @@ class LoginVC: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     
+    @IBOutlet weak var loginButton: UIButton!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //self.loginButton.isEnabled = false
 
         // Do any additional setup after loading the view.
     }
     
+    
 
     @IBAction func tappedLoginButton(_ sender: UIButton) {
         
-        let autenticacao:Auth = Auth.auth()
        
         let email:String = self.emailTextField.text  ??  ""
         let password:String = self.passwordTextField.text  ??  ""
         
-        var validacao:Bool = false
         
-        
-        
-        autenticacao.signIn(withEmail: email, password: password) { (usuario, error) in
-            
-            if error == nil {
-                
-                if usuario == nil {
-                    print("Tivemos algum problema inesperado, tente novamente")
-                } else {
-                    validacao = true
-                    print("Login feito com sucesso")
-                }
-                
+        LoginController().signin(email: email, password: password) { (usuario) in
+            if usuario {
+                self.performSegue(withIdentifier: "seguetohome", sender: self)
             } else {
-                print("Dados incorretos, verifique e tente novamente!!")
+                print("deu ruim")
+                
+                
+                
             }
-            
         }
         
-        if validacao == true {
-            tappedLoginButton(<#T##sender: UIButton##UIButton#>)
-        }
         
+        
+        
+        
+        
+        
+//        autenticacao.signIn(withEmail: email, password: password) { (usuario, error) in
+//
+//            if error == nil {
+//
+//                if usuario == nil {
+//                    print("Tivemos algum problema inesperado, tente novamente")
+//                } else {
+//                    //self.loginButton.isEnabled = true
+//                    print("Login feito com sucesso")
+//
+//                    self.performSegue(withIdentifier: "seguetohome", sender: self)
+//
+//
+//                }
+//
+//            } else {
+//                print("Dados incorretos, verifique e tente novamente!!")
+//            }
+//
+//        }
+//
+//
+//
+//
+//
         
         
         
