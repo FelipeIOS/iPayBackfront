@@ -31,7 +31,7 @@ class ProductCell: UITableViewCell {
         if let _value = value {
             self.productLabel.text = _value.name
             self.qtdLabel.text = String(_value.quantity)
-            self.priceLabel.text = "R$\(_value.price)"
+            self.priceLabel.text = String(format: "R$ %.2f", _value.price)
         }
         
         if value?.name == "Caipirinha" {
