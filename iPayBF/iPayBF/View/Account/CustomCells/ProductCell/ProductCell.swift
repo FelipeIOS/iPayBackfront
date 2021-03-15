@@ -29,4 +29,15 @@ class ProductCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func setup(value: ProductList?) {
+     
+        if let _value = value{
+            self.productLabel.text = _value.name
+            self.quantidadeLabel.text = String (_value.quantity)
+            self.valorLabel.text = "R$\(_value.price)"
+            
+        }
+        
+    }
+    
 }
