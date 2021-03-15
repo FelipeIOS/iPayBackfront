@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -82,7 +83,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="JLA-Mz-Oax" id="RBC-ae-P2B"/>
                         <outlet property="passwordTextField" destination="Jmr-ZD-y8L" id="gsa-9k-HTO"/>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="segueHome" modalPresentationStyle="fullScreen" id="8PP-He-QLQ"/>
+                        <segue destination="0gy-KG-isc" kind="presentation" identifier="segueHome" modalPresentationStyle="fullScreen" id="8PP-He-QLQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7lW-zi-HcV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -164,7 +165,7 @@
             </objects>
             <point key="canvasLocation" x="-326" y="747"/>
         </scene>
-        <!--HomeVC-->
+        <!--Roleta-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeVC" customModule="iPayBF" customModuleProvider="target" sceneMemberID="viewController">
@@ -280,6 +281,7 @@
                             <constraint firstItem="srm-Xw-Xdp" firstAttribute="top" secondItem="ItW-tJ-X3b" secondAttribute="bottom" constant="45" id="xVa-I7-cIH"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Roleta" image="line.3.crossed.swirl.circle.fill" catalog="system" id="Zrh-J3-7Gy"/>
                     <connections>
                         <outlet property="logoImageView" destination="9f4-VE-wrx" id="zxt-K6-zc7"/>
                         <outlet property="nameTextField" destination="vqy-2c-lxB" id="JBL-rY-fAC"/>
@@ -290,7 +292,38 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="644.92753623188412" y="26.785714285714285"/>
+            <point key="canvasLocation" x="1555.072463768116" y="26.785714285714285"/>
+        </scene>
+        <!--Histórico-->
+        <scene sceneID="sVS-PJ-ZBI">
+            <objects>
+                <viewController id="3LZ-hq-3g7" customClass="HistoryVC" customModule="iPayBF" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="62h-pw-1XS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Duk-tF-vlJ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mr9-2b-GeG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Duk-tF-vlJ" firstAttribute="leading" secondItem="mr9-2b-GeG" secondAttribute="leading" id="enj-uK-zRP"/>
+                            <constraint firstItem="mr9-2b-GeG" firstAttribute="trailing" secondItem="Duk-tF-vlJ" secondAttribute="trailing" id="ep9-aV-cja"/>
+                            <constraint firstItem="mr9-2b-GeG" firstAttribute="bottom" secondItem="Duk-tF-vlJ" secondAttribute="bottom" id="geW-al-xFR"/>
+                            <constraint firstItem="Duk-tF-vlJ" firstAttribute="top" secondItem="mr9-2b-GeG" secondAttribute="top" id="rMW-4F-gy0"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Histórico" image="doc.plaintext.fill" catalog="system" id="mEc-B5-oyz"/>
+                    <connections>
+                        <outlet property="historyTableView" destination="Duk-tF-vlJ" id="X6o-mf-bWm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ur1-d7-Kk9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1555" y="760"/>
         </scene>
         <!--AccountVC-->
         <scene sceneID="wy0-Rg-EEi">
@@ -320,7 +353,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T9E-F1-xCk" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1466.6666666666667" y="26.785714285714285"/>
+            <point key="canvasLocation" x="2376.811594202899" y="26.785714285714285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="I6Q-60-adx">
@@ -340,10 +373,36 @@
             </objects>
             <point key="canvasLocation" x="-1152" y="27"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="j6x-jp-fkf">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="0gy-KG-isc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sVg-Eg-qbV">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.29339987039999998" green="0.66498744489999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="fth-2V-knt"/>
+                        <segue destination="3LZ-hq-3g7" kind="relationship" relationship="viewControllers" id="5Ar-Vg-Nqw"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hJl-5o-kG8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="644.92753623188412" y="26.785714285714285"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Image-1" width="512" height="512"/>
         <image name="card" width="128" height="128"/>
         <image name="credit-card" width="128" height="128"/>
+        <image name="doc.plaintext.fill" catalog="system" width="115" height="128"/>
+        <image name="line.3.crossed.swirl.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

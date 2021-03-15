@@ -25,6 +25,10 @@
 		B2F7FFD625E473280038370E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2F7FFD525E473280038370E /* Assets.xcassets */; };
 		B2F7FFD925E473280038370E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F7FFD725E473280038370E /* LaunchScreen.storyboard */; };
 		BC03879C25FAC60600EB56DE /* AccountWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC03879B25FAC60600EB56DE /* AccountWorker.swift */; };
+		BC55398C2600241100CD4881 /* Historico.json in Resources */ = {isa = PBXBuildFile; fileRef = BC55398B2600241100CD4881 /* Historico.json */; };
+		BC55398F2600248A00CD4881 /* HistoryNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC55398E2600248A00CD4881 /* HistoryNetwork.swift */; };
+		BC553993260026CF00CD4881 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC553992260026CF00CD4881 /* HistoryVC.swift */; };
+		BC553998260026FB00CD4881 /* HistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC553997260026FB00CD4881 /* HistoryController.swift */; };
 		BC75B93D25F6DE2B008E2DED /* Account.json in Resources */ = {isa = PBXBuildFile; fileRef = BC75B93C25F6DE2B008E2DED /* Account.json */; };
 		BC75B94325F6E14E008E2DED /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC75B94225F6E14E008E2DED /* AccountController.swift */; };
 		BCBB71B425F868DB00CBA623 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBB71B325F868DB00CBA623 /* AppDelegate.swift */; };
@@ -61,6 +65,10 @@
 		B2F7FFDA25E473280038370E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6365269A393193FBC2290EB /* Pods-iPayBF.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPayBF.debug.xcconfig"; path = "Target Support Files/Pods-iPayBF/Pods-iPayBF.debug.xcconfig"; sourceTree = "<group>"; };
 		BC03879B25FAC60600EB56DE /* AccountWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountWorker.swift; sourceTree = "<group>"; };
+		BC55398B2600241100CD4881 /* Historico.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Historico.json; sourceTree = "<group>"; };
+		BC55398E2600248A00CD4881 /* HistoryNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryNetwork.swift; sourceTree = "<group>"; };
+		BC553992260026CF00CD4881 /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
+		BC553997260026FB00CD4881 /* HistoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryController.swift; sourceTree = "<group>"; };
 		BC75B93C25F6DE2B008E2DED /* Account.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Account.json; sourceTree = "<group>"; };
 		BC75B94225F6E14E008E2DED /* AccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
 		BCBB71B325F868DB00CBA623 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +111,7 @@
 				BC03879B25FAC60600EB56DE /* AccountWorker.swift */,
 				BCF18A5B25FEA3D300FDD31E /* LoginWorker.swift */,
 				BCF18A8B25FEAB8F00FDD31E /* CadastroWorker.swift */,
+				BC55398E2600248A00CD4881 /* HistoryNetwork.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -148,6 +157,7 @@
 		B2F7005925E721400038370E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BC55398B2600241100CD4881 /* Historico.json */,
 				BC75B93C25F6DE2B008E2DED /* Account.json */,
 				B2F7005A25E721550038370E /* User.swift */,
 				B2130B6B25F30F47009BF749 /* Account.swift */,
@@ -159,6 +169,7 @@
 		B2F7005E25E721930038370E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BC553996260026E500CD4881 /* History */,
 				BCF18A8625FEA9F500FDD31E /* Cadastro */,
 				BCF18A5725FEA20400FDD31E /* Login */,
 				BC75B94125F6E135008E2DED /* Account */,
@@ -170,6 +181,7 @@
 		B2F7005F25E721990038370E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BC553991260026A200CD4881 /* History */,
 				BCF18A5225FEA1B000FDD31E /* Cadastro */,
 				BCF18A4E25FEA08800FDD31E /* Login */,
 				B2130B5A25F2F4D9009BF749 /* Account */,
@@ -213,6 +225,22 @@
 				BCF18A4B25FE9FF500FDD31E /* GoogleService-Info.plist */,
 			);
 			path = iPayBF;
+			sourceTree = "<group>";
+		};
+		BC553991260026A200CD4881 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				BC553992260026CF00CD4881 /* HistoryVC.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		BC553996260026E500CD4881 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				BC553997260026FB00CD4881 /* HistoryController.swift */,
+			);
+			path = History;
 			sourceTree = "<group>";
 		};
 		BC75B94025F6E123008E2DED /* Home */ = {
@@ -352,6 +380,7 @@
 				B2A3E04925EDA93400D7FB4E /* EmptyCell.xib in Resources */,
 				B2F7FFD625E473280038370E /* Assets.xcassets in Resources */,
 				B2130B6925F302FF009BF749 /* ProductCell.xib in Resources */,
+				BC55398C2600241100CD4881 /* Historico.json in Resources */,
 				BC75B93D25F6DE2B008E2DED /* Account.json in Resources */,
 				B2130B6425F2F727009BF749 /* PaymentCell.xib in Resources */,
 				B2F7FFD425E473260038370E /* Main.storyboard in Resources */,
@@ -416,14 +445,17 @@
 				BCBB71B425F868DB00CBA623 /* AppDelegate.swift in Sources */,
 				B2A3E04825EDA93400D7FB4E /* EmptyCell.swift in Sources */,
 				B2F7FFD125E473260038370E /* HomeVC.swift in Sources */,
+				BC553993260026CF00CD4881 /* HistoryVC.swift in Sources */,
 				B2130B6F25F310C5009BF749 /* ProductList.swift in Sources */,
 				BCBB71B725F868E800CBA623 /* SceneDelegate.swift in Sources */,
 				B2130B6C25F30F47009BF749 /* Account.swift in Sources */,
 				BC75B94325F6E14E008E2DED /* AccountController.swift in Sources */,
 				B2F7006125E721B60038370E /* HomeController.swift in Sources */,
 				BCF18A5025FEA09A00FDD31E /* LoginViewController.swift in Sources */,
+				BC553998260026FB00CD4881 /* HistoryController.swift in Sources */,
 				BCF18A5925FEA21500FDD31E /* LoginController.swift in Sources */,
 				B2F7005B25E721550038370E /* User.swift in Sources */,
+				BC55398F2600248A00CD4881 /* HistoryNetwork.swift in Sources */,
 				BCF18A5425FEA1C000FDD31E /* CadastroViewController.swift in Sources */,
 				D3E5033725E9CA8900F933FC /* Alert.swift in Sources */,
 				BCF18A5C25FEA3D300FDD31E /* LoginWorker.swift in Sources */,

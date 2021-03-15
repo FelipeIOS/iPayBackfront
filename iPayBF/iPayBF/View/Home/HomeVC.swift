@@ -118,7 +118,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
 					self.usersTableView.reloadData()
 					self.blockedSortButton()
 					self.nameTextField.isUserInteractionEnabled = true
-					self.performSegue(withIdentifier: "segueDetalhe", sender: self)
+					self.performSegue(withIdentifier: "segueDetalhe", sender: nil)
 				}
 			})
 			

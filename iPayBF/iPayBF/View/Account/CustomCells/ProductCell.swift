@@ -32,9 +32,9 @@ class ProductCell: UITableViewCell {
 	
 	// MARK: - Function
 	func setupCell(product: ProductList) {
-		self.productLabel.text = product.name
-		self.qtdLabel.text = String(product.quantity)
-		self.priceLabel.text = "R$ \(product.price)"
+		self.productLabel.text	= product.name
+		self.qtdLabel.text 		= String(product.quantity)
+		self.priceLabel.text 	= String(format: "R$ %.2f ", product.price)
 		
 		if product.productType == "REFEIÇÃO" {
 			self.productImageView.image = UIImage(named: "food")

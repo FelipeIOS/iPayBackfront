@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol PaymentCellProtocol {
+protocol PaymentCellProtocol: class {
 	func tappedPaymentButton()
 }
 
@@ -20,7 +20,7 @@ class PaymentCell: UITableViewCell {
 	
 	// MARK: - Variable
 	static let identifier: String = "PaymentCell"
-	var delegate: PaymentCellProtocol?
+	weak var delegate: PaymentCellProtocol?
 	
 	static func nib() -> UINib {
 		return UINib(nibName: self.identifier, bundle: nil)
