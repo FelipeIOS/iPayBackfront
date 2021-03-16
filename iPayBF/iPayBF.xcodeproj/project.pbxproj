@@ -26,9 +26,11 @@
 		B2F7FFD925E473280038370E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F7FFD725E473280038370E /* LaunchScreen.storyboard */; };
 		BC03879C25FAC60600EB56DE /* AccountWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC03879B25FAC60600EB56DE /* AccountWorker.swift */; };
 		BC55398C2600241100CD4881 /* Historico.json in Resources */ = {isa = PBXBuildFile; fileRef = BC55398B2600241100CD4881 /* Historico.json */; };
-		BC55398F2600248A00CD4881 /* HistoryNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC55398E2600248A00CD4881 /* HistoryNetwork.swift */; };
+		BC55398F2600248A00CD4881 /* HistoryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC55398E2600248A00CD4881 /* HistoryWorker.swift */; };
 		BC553993260026CF00CD4881 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC553992260026CF00CD4881 /* HistoryVC.swift */; };
 		BC553998260026FB00CD4881 /* HistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC553997260026FB00CD4881 /* HistoryController.swift */; };
+		BC55399C26002FB500CD4881 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC55399B26002FB500CD4881 /* History.swift */; };
+		BC55399F2600306B00CD4881 /* HistoryAccountList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC55399E2600306B00CD4881 /* HistoryAccountList.swift */; };
 		BC75B93D25F6DE2B008E2DED /* Account.json in Resources */ = {isa = PBXBuildFile; fileRef = BC75B93C25F6DE2B008E2DED /* Account.json */; };
 		BC75B94325F6E14E008E2DED /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC75B94225F6E14E008E2DED /* AccountController.swift */; };
 		BCBB71B425F868DB00CBA623 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBB71B325F868DB00CBA623 /* AppDelegate.swift */; };
@@ -66,9 +68,11 @@
 		B6365269A393193FBC2290EB /* Pods-iPayBF.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPayBF.debug.xcconfig"; path = "Target Support Files/Pods-iPayBF/Pods-iPayBF.debug.xcconfig"; sourceTree = "<group>"; };
 		BC03879B25FAC60600EB56DE /* AccountWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountWorker.swift; sourceTree = "<group>"; };
 		BC55398B2600241100CD4881 /* Historico.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Historico.json; sourceTree = "<group>"; };
-		BC55398E2600248A00CD4881 /* HistoryNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryNetwork.swift; sourceTree = "<group>"; };
+		BC55398E2600248A00CD4881 /* HistoryWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryWorker.swift; sourceTree = "<group>"; };
 		BC553992260026CF00CD4881 /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
 		BC553997260026FB00CD4881 /* HistoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryController.swift; sourceTree = "<group>"; };
+		BC55399B26002FB500CD4881 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		BC55399E2600306B00CD4881 /* HistoryAccountList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryAccountList.swift; sourceTree = "<group>"; };
 		BC75B93C25F6DE2B008E2DED /* Account.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Account.json; sourceTree = "<group>"; };
 		BC75B94225F6E14E008E2DED /* AccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
 		BCBB71B325F868DB00CBA623 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -111,7 +115,7 @@
 				BC03879B25FAC60600EB56DE /* AccountWorker.swift */,
 				BCF18A5B25FEA3D300FDD31E /* LoginWorker.swift */,
 				BCF18A8B25FEAB8F00FDD31E /* CadastroWorker.swift */,
-				BC55398E2600248A00CD4881 /* HistoryNetwork.swift */,
+				BC55398E2600248A00CD4881 /* HistoryWorker.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -162,6 +166,8 @@
 				B2F7005A25E721550038370E /* User.swift */,
 				B2130B6B25F30F47009BF749 /* Account.swift */,
 				B2130B6E25F310C5009BF749 /* ProductList.swift */,
+				BC55399B26002FB500CD4881 /* History.swift */,
+				BC55399E2600306B00CD4881 /* HistoryAccountList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -436,6 +442,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC55399F2600306B00CD4881 /* HistoryAccountList.swift in Sources */,
 				BC03879C25FAC60600EB56DE /* AccountWorker.swift in Sources */,
 				B2130B6325F2F727009BF749 /* PaymentCell.swift in Sources */,
 				BCF18A8C25FEAB8F00FDD31E /* CadastroWorker.swift in Sources */,
@@ -445,6 +452,7 @@
 				BCBB71B425F868DB00CBA623 /* AppDelegate.swift in Sources */,
 				B2A3E04825EDA93400D7FB4E /* EmptyCell.swift in Sources */,
 				B2F7FFD125E473260038370E /* HomeVC.swift in Sources */,
+				BC55399C26002FB500CD4881 /* History.swift in Sources */,
 				BC553993260026CF00CD4881 /* HistoryVC.swift in Sources */,
 				B2130B6F25F310C5009BF749 /* ProductList.swift in Sources */,
 				BCBB71B725F868E800CBA623 /* SceneDelegate.swift in Sources */,
@@ -455,7 +463,7 @@
 				BC553998260026FB00CD4881 /* HistoryController.swift in Sources */,
 				BCF18A5925FEA21500FDD31E /* LoginController.swift in Sources */,
 				B2F7005B25E721550038370E /* User.swift in Sources */,
-				BC55398F2600248A00CD4881 /* HistoryNetwork.swift in Sources */,
+				BC55398F2600248A00CD4881 /* HistoryWorker.swift in Sources */,
 				BCF18A5425FEA1C000FDD31E /* CadastroViewController.swift in Sources */,
 				D3E5033725E9CA8900F933FC /* Alert.swift in Sources */,
 				BCF18A5C25FEA3D300FDD31E /* LoginWorker.swift in Sources */,
