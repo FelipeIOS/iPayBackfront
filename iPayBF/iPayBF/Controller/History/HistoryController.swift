@@ -22,4 +22,18 @@ class HistoryController {
 		return self.history?.historyAccountList[indexPath.row]
 	}
 	
+	func loadHistory(completion: @escaping(_ success: Bool, _ error: NSError?) -> Void) {
+		
+		HistoryWorker().loadHistory { (history, error) in
+			if history == nil {
+				completion(false, nil)
+			} else {
+				self.history = history
+				completion(true, nil)
+			}
+		}
+		
+	}
+	
+	
 }

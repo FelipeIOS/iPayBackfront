@@ -50,4 +50,24 @@ class HistoryWorker {
 	}
 	
 	
+	func loadHistoryMock(completion: @escaping(_ success: History?, _ error: NSError?) -> Void) {
+		
+		if let path = Bundle.main.path(forResource: "Historico", ofType: "json") {
+			
+			do {
+				let data = try Data(contentsOf: URL(fileURLWithPath: path),
+										  options: .mappedIfSafe)
+				
+				let history: History = try History(data: data)
+				
+				completion(history, nil)
+			} catch {
+				print(error)
+				completion(nil, nil)
+			}
+			
+		}
+		
+	}
+	
 }
