@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="J5L-5N-wM6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="w25-ZW-isb">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -73,14 +73,14 @@
                     <connections>
                         <outlet property="emailTextField" destination="mgo-2e-eaS" id="wet-Ex-aC4"/>
                         <outlet property="senhaTextField" destination="B7H-cA-UEk" id="v9o-H3-Arf"/>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="segueHome" modalPresentationStyle="fullScreen" id="0df-Tw-zaC"/>
+                        <segue destination="w25-ZW-isb" kind="presentation" identifier="segueHome" modalPresentationStyle="fullScreen" id="0df-Tw-zaC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8GG-3a-uZH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1091.304347826087" y="30.803571428571427"/>
         </scene>
-        <!--HomeVC-->
+        <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeVC" customModule="iPayBF" customModuleProvider="target" sceneMemberID="viewController">
@@ -184,6 +184,7 @@
                             <constraint firstItem="srm-Xw-Xdp" firstAttribute="top" secondItem="ItW-tJ-X3b" secondAttribute="bottom" constant="45" id="xVa-I7-cIH"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" image="line.3.crossed.swirl.circle.fill" catalog="system" id="LPx-Xi-M39"/>
                     <connections>
                         <outlet property="logoImageView" destination="9f4-VE-wrx" id="zxt-K6-zc7"/>
                         <outlet property="nameTextField" destination="vqy-2c-lxB" id="JBL-rY-fAC"/>
@@ -194,7 +195,38 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-310" y="32"/>
+            <point key="canvasLocation" x="600" y="31.473214285714285"/>
+        </scene>
+        <!--Historico-->
+        <scene sceneID="U39-bL-Ple">
+            <objects>
+                <viewController id="u3W-wm-klS" customClass="HistoryVC" customModule="iPayBF" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8G3-P0-Vnj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="o7m-Ot-0cX">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OWo-UM-TrC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="o7m-Ot-0cX" firstAttribute="top" secondItem="OWo-UM-TrC" secondAttribute="top" id="7ed-pR-OKC"/>
+                            <constraint firstItem="o7m-Ot-0cX" firstAttribute="leading" secondItem="OWo-UM-TrC" secondAttribute="leading" id="Sky-8S-1SJ"/>
+                            <constraint firstItem="OWo-UM-TrC" firstAttribute="trailing" secondItem="o7m-Ot-0cX" secondAttribute="trailing" id="ZEC-nB-uIC"/>
+                            <constraint firstItem="OWo-UM-TrC" firstAttribute="bottom" secondItem="o7m-Ot-0cX" secondAttribute="bottom" id="kVr-Ga-3j6"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Historico" image="doc.plaintext" catalog="system" id="3sL-oq-J6F"/>
+                    <connections>
+                        <outlet property="historyTableView" destination="o7m-Ot-0cX" id="7Ge-Pr-5OV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HPg-dC-RFQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-310" y="715"/>
         </scene>
         <!--CadastroVC-->
         <scene sceneID="pLJ-XQ-7xj">
@@ -285,13 +317,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T9E-F1-xCk" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="465" y="31"/>
+            <point key="canvasLocation" x="1373.913043478261" y="30.803571428571427"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="xgT-Ub-8sX">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="w25-ZW-isb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oey-8r-QEA">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="aL1-4T-HFg"/>
+                        <segue destination="u3W-wm-klS" kind="relationship" relationship="viewControllers" id="E1i-Bg-S1J"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D5n-bk-wLd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-310.14492753623193" y="31.473214285714285"/>
         </scene>
     </scenes>
     <resources>
         <image name="Image-1" width="512" height="512"/>
         <image name="card" width="128" height="128"/>
         <image name="credit-card" width="128" height="128"/>
+        <image name="doc.plaintext" catalog="system" width="115" height="128"/>
+        <image name="line.3.crossed.swirl.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

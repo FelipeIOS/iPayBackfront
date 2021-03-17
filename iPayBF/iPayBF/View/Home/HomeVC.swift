@@ -100,9 +100,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
             
             self.alert?.detailAlert(titulo: "", mensagem: "", completion: { (success) in
                 
-                
                 if success {
-                    
                     self.controller.removeAllUsers()
                     self.usersTableView.reloadData()
                     self.blockedSortButton()

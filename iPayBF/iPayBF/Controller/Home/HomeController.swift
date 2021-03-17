@@ -64,6 +64,9 @@ class HomeController {
     
     func checkUserPayer(indexPath: IndexPath) -> Bool {
         
+        if self.arrayUser.count == 0 {
+            return false
+        }
         
         //TODO JR - O APP CRASHA, POIS NÃO HÁ INDEX
         if self.sortedUser === self.arrayUser[indexPath.row] {
