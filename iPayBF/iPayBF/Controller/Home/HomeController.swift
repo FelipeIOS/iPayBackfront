@@ -59,6 +59,10 @@ class HomeController {
 	
 	func checkUserPayer(indexPath: IndexPath) -> Bool {
 		
+		if self.arrayUser.count == 0 {
+			return false
+		}
+		
 		if self.sortedUser === self.arrayUser[indexPath.row] {
 			return true
 		} else {

@@ -109,7 +109,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
 	}
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		
+				
 		if self.controller.checkUserPayer(indexPath: indexPath) {
 			
 			self.alert?.detailAlert(titulo: "", mensagem: "", completion: { (success) in
