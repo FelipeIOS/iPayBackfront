@@ -39,6 +39,11 @@ class PaymentCell: UITableViewCell {
 		self.totalValuelabel.text = String(format: "Valor total: R$ %.2f", total)
 	}
 	
+	func setupCell(total: Float) {
+		self.paymentButton.isHidden = true
+		self.totalValuelabel.text = String(format: "Valor total: R$ %.2f", total)
+	}
+	
 	
 	// MARK: - IBAction
 	@IBAction func tappedPaymentButton(_ sender: UIButton) {

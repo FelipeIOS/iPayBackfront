@@ -34,10 +34,12 @@ class HistoryVC: UIViewController {
 		self.historyTableView.dataSource = self
 		self.historyTableView.register(UINib(nibName: "ProductCell", bundle: nil),
 												 forCellReuseIdentifier: "ProductCell")
+		self.historyTableView.register(PaymentCell.nib(),
+												 forCellReuseIdentifier: PaymentCell.identifier)
 		self.historyTableView.reloadData()
 	}
 	
-		
+	
 }
 
 
@@ -49,6 +51,16 @@ extension HistoryVC: UITableViewDelegate, UITableViewDataSource {
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		
+		if self.controller.checkIfLastIndex(indexPath: indexPath) {
+			guard let cell = tableView.dequeueReusableCell(withIdentifier: PaymentCell.identifier,
+																		  for: indexPath) as? PaymentCell
+			else { return UITableViewCell() }
+			
+			cell.setupCell(total: self.controller.getTotalValue())
+			return cell
+		}
+		
 		let cell: ProductCell? = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as? ProductCell
 		
 		cell?.setupCell(value: self.controller.loadCurrentHistoryAccount(indexPath: indexPath))

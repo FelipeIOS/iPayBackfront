@@ -13,7 +13,7 @@ class HistoryController {
 	private var history: History?
 	
 	var numberOfRows: Int {
-		return history?.historyAccountList.count ?? 0
+		return (history?.historyAccountList.count ?? 0) + 1
 	}
 	
 	
@@ -33,6 +33,18 @@ class HistoryController {
 			}
 		}
 		
+	}
+	
+	func checkIfLastIndex(indexPath: IndexPath) -> Bool {
+		if indexPath.row == self.history?.historyAccountList.count ?? 0 {
+			return true
+		} else {
+			return false
+		}
+	}
+	
+	func getTotalValue() -> Float {
+		return Float(self.history?.totalValue ?? 0.0)
 	}
 	
 	
