@@ -48,7 +48,7 @@ extension HistoryVC: UITableViewDelegate, UITableViewDataSource {
         
         let cell: ProductCell? = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as? ProductCell
         
-        cell?.setup(value: self.viewModel, indexPath: indexPath)
+        cell?.setup(value: self.viewModel?.loadCurrentHistoryAccount(indexPath: indexPath))
         
         return cell ?? UITableViewCell()
     }

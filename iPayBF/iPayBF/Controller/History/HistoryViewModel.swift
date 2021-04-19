@@ -16,8 +16,8 @@ protocol HistoryViewModelDelegate: class {
 class HistoryViewModel {
     
     private var history: History?
-    private var delegate: HistoryViewModelDelegate?
-    private var currentHistoryAccountList: HistoryAccountList?
+    private weak var delegate: HistoryViewModelDelegate?
+    
     
     init(delegate: HistoryViewModelDelegate?, history: History? = nil) {
         
@@ -25,21 +25,17 @@ class HistoryViewModel {
         self.history = history
     }
     
-    var name: String {
-        return self.currentHistoryAccountList?.name ?? ""
-    }
-    
-    var price: String {
-        return String(format: "R$ %.2f", self.currentHistoryAccountList?.price ?? 0)
-    }
+
     
     var numberOfRows: Int {
         return history?.historyAccountList.count ?? 0
     }
     
-    func loadCurrentHistoryAccount(indexPath: IndexPath) {
+    func loadCurrentHistoryAccount(indexPath: IndexPath) -> ProductCellViewModel? {
         
-        self.currentHistoryAccountList = self.history?.historyAccountList[indexPath.row]
+        let productCellViewModel:ProductCellViewModel? = ProductCellViewModel(value: self.history?.historyAccountList[indexPath.row])
+        
+        return productCellViewModel
     }
     
     func loadHistory(){

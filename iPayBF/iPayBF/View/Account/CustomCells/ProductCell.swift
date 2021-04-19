@@ -12,6 +12,25 @@ enum ProductType:String {
     case bebida = "BEBIDA"
 }
 
+class ProductCellViewModel {
+    
+    private var currentHistoryAccountList: HistoryAccountList?
+    
+    init(value: HistoryAccountList?) {
+        self.currentHistoryAccountList = value
+    }
+    
+    var name: String {
+        return self.currentHistoryAccountList?.name ?? ""
+    }
+    
+    var price: String {
+        return String(format: "R$ %.2f", self.currentHistoryAccountList?.price ?? 0)
+    }
+    
+}
+
+
 class ProductCell: UITableViewCell {
 
     @IBOutlet weak var productLabel: UILabel!
@@ -31,13 +50,11 @@ class ProductCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setup(value: HistoryViewModel?, indexPath: IndexPath) {
+    func setup(value: ProductCellViewModel?) {
         
-            value?.loadCurrentHistoryAccount(indexPath: indexPath)
-            self.productLabel.text = value?.name
-            self.qtdLabel.isHidden = true
-            self.priceLabel.text =  value?.price
-
+        self.productLabel.text = value?.name
+        self.qtdLabel.isHidden = true
+        self.priceLabel.text =  value?.price
     }
     
     func setup(value: ProductList?) {
