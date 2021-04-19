@@ -23,7 +23,7 @@
 		B2574A5E260021C1001414A9 /* Historico.json in Resources */ = {isa = PBXBuildFile; fileRef = B2574A5D260021C0001414A9 /* Historico.json */; };
 		B2574A612600246E001414A9 /* HistoryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2574A602600246E001414A9 /* HistoryWorker.swift */; };
 		B2574A65260026B2001414A9 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2574A64260026B2001414A9 /* HistoryVC.swift */; };
-		B2574A6A260026E5001414A9 /* HistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2574A69260026E5001414A9 /* HistoryController.swift */; };
+		B2574A6A260026E5001414A9 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2574A69260026E5001414A9 /* HistoryViewModel.swift */; };
 		B2A3E04825EDA93400D7FB4E /* EmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A3E04625EDA93400D7FB4E /* EmptyCell.swift */; };
 		B2A3E04925EDA93400D7FB4E /* EmptyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2A3E04725EDA93400D7FB4E /* EmptyCell.xib */; };
 		B2F7005725E70D4F0038370E /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F7005625E70D4F0038370E /* UserCell.swift */; };
@@ -55,7 +55,7 @@
 		B2574A5D260021C0001414A9 /* Historico.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Historico.json; sourceTree = "<group>"; };
 		B2574A602600246E001414A9 /* HistoryWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryWorker.swift; sourceTree = "<group>"; };
 		B2574A64260026B2001414A9 /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
-		B2574A69260026E5001414A9 /* HistoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryController.swift; sourceTree = "<group>"; };
+		B2574A69260026E5001414A9 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
 		B2A3E04625EDA93400D7FB4E /* EmptyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCell.swift; sourceTree = "<group>"; };
 		B2A3E04725EDA93400D7FB4E /* EmptyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyCell.xib; sourceTree = "<group>"; };
 		B2F7005625E70D4F0038370E /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
@@ -152,7 +152,7 @@
 		B2574A6326002697001414A9 /* History */ = {
 			isa = PBXGroup;
 			children = (
-				B2574A69260026E5001414A9 /* HistoryController.swift */,
+				B2574A69260026E5001414A9 /* HistoryViewModel.swift */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -385,7 +385,7 @@
 				B24F4DBF26002FB400CD8A1D /* History.swift in Sources */,
 				B2130B6825F302FF009BF749 /* ProductCell.swift in Sources */,
 				B2F7005725E70D4F0038370E /* UserCell.swift in Sources */,
-				B2574A6A260026E5001414A9 /* HistoryController.swift in Sources */,
+				B2574A6A260026E5001414A9 /* HistoryViewModel.swift in Sources */,
 				B2A3E04825EDA93400D7FB4E /* EmptyCell.swift in Sources */,
 				B2F7FFD125E473260038370E /* HomeVC.swift in Sources */,
 				B2130B6F25F310C5009BF749 /* ProductList.swift in Sources */,

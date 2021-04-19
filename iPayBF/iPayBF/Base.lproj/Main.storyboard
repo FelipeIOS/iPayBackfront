@@ -180,6 +180,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Historico" image="doc.plaintext" catalog="system" id="JHq-FG-nAz"/>
+                    <connections>
+                        <outlet property="historyTableView" destination="BMM-9Y-Nbd" id="TC5-5X-ZSO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWe-ng-g9M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

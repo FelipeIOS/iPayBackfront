@@ -7,50 +7,49 @@
 
 import UIKit
 
-class HistoryVC: UIViewController {
-
+class HistoryVC: UIViewController,HistoryViewModelDelegate {
+    
+    func successLoadHistory(value: Bool) {
+        
+        self.historyTableView.delegate = self
+        self.historyTableView.dataSource = self
+        self.historyTableView.reloadData()
+    }
+    
+    func failureLoadHistory(value: NSError?) {
+        print(value ?? "")
+    }
+    
+    
     @IBOutlet weak var historyTableView: UITableView!
     
-    private var controller: HistoryController = HistoryController()
+    var viewModel: HistoryViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.historyTableView.register(UINib(nibName: "ProductCell", bundle: nil), forCellReuseIdentifier: "ProductCell")
-
-        self.controller.loadHistory { (success, error) in
-            
-            if success {
-                
-                self.historyTableView.delegate = self
-                self.historyTableView.dataSource = self
-                self.historyTableView.reloadData()
-            }else{
-                print(error)
-            }
-        }
+        self.viewModel = HistoryViewModel(delegate: self)
         
-        // Do any additional setup after loading the view.
-    }
+        self.historyTableView.register(UINib(nibName: "ProductCell", bundle: nil), forCellReuseIdentifier: "ProductCell")
+        
+        self.viewModel?.loadHistory()
 
+    }
+    
 }
 
-
 extension HistoryVC: UITableViewDelegate, UITableViewDataSource {
-   
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.controller.numberOfRows
+        return self.viewModel?.numberOfRows ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell: ProductCell? = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as? ProductCell
         
-        cell?.setup(value: self.controller.loadCurrentHistoryAccount(indexPath: indexPath))
+        cell?.setup(value: self.viewModel, indexPath: indexPath)
         
         return cell ?? UITableViewCell()
     }
-    
-    
-    
 }

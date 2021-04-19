@@ -87,54 +87,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A955655D-9E41-407E-82FC-F3ABBB132073"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "iPayBF/View/History/HistoryVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "A955655D-9E41-407E-82FC-F3ABBB132073 - a93a7c9c8ca641fc"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "iPayBF.HistoryVC.viewDidLoad() -&gt; ()"
-                  moduleName = "iPayBF"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/felipemiranda/iPayBackfront/iPayBF/iPayBF/View/History/HistoryVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "521">
-               </Location>
-               <Location
-                  uuid = "A955655D-9E41-407E-82FC-F3ABBB132073 - d54fbb1c68dc43b4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;__C.NSError&gt;) -&gt; () in iPayBF.HistoryVC.viewDidLoad() -&gt; ()"
-                  moduleName = "iPayBF"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/felipemiranda/iPayBackfront/iPayBF/iPayBF/View/History/HistoryVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "130">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "30E2F103-9A4D-4E89-8D4B-3A252FED43F9"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -142,9 +94,9 @@
             filePath = "iPayBF/Controller/History/HistoryController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "loadHistory(completion:)"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "loadHistory()"
             landmarkType = "7">
             <Locations>
                <Location
@@ -206,24 +158,8 @@
             filePath = "iPayBF/View/History/HistoryVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A714EB32-FE79-48B3-B530-7DFB1D824AF3"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "iPayBF/View/History/HistoryVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -238,8 +174,8 @@
             filePath = "iPayBF/View/History/HistoryVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>

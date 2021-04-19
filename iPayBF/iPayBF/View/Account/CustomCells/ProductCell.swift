@@ -31,15 +31,13 @@ class ProductCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setup(value: HistoryAccountList?) {
+    func setup(value: HistoryViewModel?, indexPath: IndexPath) {
         
-        if let _value = value {
-            self.productLabel.text = _value.name
+            value?.loadCurrentHistoryAccount(indexPath: indexPath)
+            self.productLabel.text = value?.name
             self.qtdLabel.isHidden = true
-            self.priceLabel.text =  String(format: "R$ %.2f", _value.price)
-       
-//            self.productImageView.image = UIImage(named: _value.iconImage)
-        }
+            self.priceLabel.text =  value?.price
+
     }
     
     func setup(value: ProductList?) {
