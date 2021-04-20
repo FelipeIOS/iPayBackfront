@@ -8,9 +8,21 @@
 import Foundation
 import Alamofire
 
-class AccountController {
+protocol AccountViewModelDelegate: class {
+    func success()
+    func failure()
+}
+
+
+class AccountViewModel {
     
     private var account: Account?
+    private weak var delegate: AccountViewModelDelegate?
+    
+    init(delegate: AccountViewModelDelegate?, account: Account? = nil) {
+        self.account = account
+        self.delegate = delegate
+    }
     
     var count: Int {
         
@@ -40,15 +52,15 @@ class AccountController {
         return false
     }
     
-    func loadAccount(completion:@escaping(_ success: Bool, _ error: NSError?) -> Void){
+    func loadAccount(){
     
         AccountWorker().loadAccount { (account, error) in
             
             if account != nil {
                 self.account = account
-                completion(true, nil)
+                self.delegate?.success()
             }else{
-                completion(false, error)
+                self.delegate?.failure()
             }
         }
     }

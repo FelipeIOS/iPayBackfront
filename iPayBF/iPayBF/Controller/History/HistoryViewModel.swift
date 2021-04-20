@@ -31,9 +31,9 @@ class HistoryViewModel {
         return history?.historyAccountList.count ?? 0
     }
     
-    func loadCurrentHistoryAccount(indexPath: IndexPath) -> ProductCellViewModel? {
+    func loadCurrentHistoryAccount(indexPath: IndexPath) -> HistoryAccountViewModel? {
         
-        let productCellViewModel:ProductCellViewModel? = ProductCellViewModel(value: self.history?.historyAccountList[indexPath.row])
+        let productCellViewModel:HistoryAccountViewModel? = HistoryAccountViewModel(value: self.history?.historyAccountList[indexPath.row])
         
         return productCellViewModel
     }

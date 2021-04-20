@@ -7,25 +7,26 @@
 
 import UIKit
 
-class AccountVC: UIViewController {
-
-    private var controller: AccountController = AccountController()
+class AccountVC: UIViewController, AccountViewModelDelegate {
+    func success() {
+        self.loadTableView()
+    }
+    
+    func failure() {
+        
+    }
+    
     @IBOutlet weak var accountTableView: UITableView!
-
+     var viewModel: AccountViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.viewModel  = AccountViewModel(delegate: self)
         self.accountTableView.register(UINib(nibName: "PaymentCell", bundle: nil), forCellReuseIdentifier: "PaymentCell")
         self.accountTableView.register(UINib(nibName: "ProductCell", bundle: nil), forCellReuseIdentifier: "ProductCell")
-        
-        self.controller.loadAccount { (success, error) in
-            
-            if  success {
-                self.loadTableView()
-            }
-                
-        }
+       
+        self.viewModel?.loadAccount()
         // Do any additional setup after loading the view.
     }
 
@@ -43,23 +44,23 @@ class AccountVC: UIViewController {
 extension AccountVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.controller.count
+        return self.viewModel?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if self.controller.checkIfLastIndex(indexPath: indexPath) {
+        if self.viewModel?.checkIfLastIndex(indexPath: indexPath) ?? false {
            
             let cell: PaymentCell? = tableView.dequeueReusableCell(withIdentifier: "PaymentCell", for: indexPath) as? PaymentCell
             
-            cell?.setup(value: self.controller.loadTotalValue(), delegate: self)
+            cell?.setup(value: self.viewModel?.loadTotalValue() ?? 0, delegate: self)
 
             return cell ?? UITableViewCell()
         }else{
             
             let cell: ProductCell? = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as? ProductCell
             
-            cell?.setup(value: self.controller.loadCurrentProduct(indexPath: indexPath))
+            cell?.setup(value: self.viewModel?.loadCurrentProduct(indexPath: indexPath))
         
             return cell ?? UITableViewCell()
         }

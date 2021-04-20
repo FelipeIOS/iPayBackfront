@@ -11,13 +11,51 @@ enum ProductType:String {
     case refeicao = "REFEIÇÃO"
     case bebida = "BEBIDA"
 }
+class ProductViewModel {
+    
+    private var currentProductList: ProductList?
+    
+    init(value: ProductList?) {
+      
+        self.currentProductList = value
+    }
+    
+    var name: String {
+        return self.currentProductList?.name ?? ""
+    }
+    
+    var price: String {
+        return String(format: "R$ %.2f", self.currentProductList?.price ?? 0)
+    }
+    
+    var quantity: String {
+        
+        return String(self.currentProductList?.quantity ?? 0)
+    }
+    
+    var productImageType: UIImage {
+        
+        var image: UIImage = UIImage()
+        
+        if self.currentProductList?.productType == ProductType.refeicao.rawValue {
+            image = UIImage(named: "food") ?? UIImage()
+        }else {
+            image = UIImage(named: "beer") ?? UIImage()
+        }
+        
+        return image
+    }
+    
+}
 
-class ProductCellViewModel {
+class HistoryAccountViewModel {
     
     private var currentHistoryAccountList: HistoryAccountList?
+    private var currentProductList: ProductList?
     
     init(value: HistoryAccountList?) {
         self.currentHistoryAccountList = value
+       
     }
     
     var name: String {
@@ -50,7 +88,7 @@ class ProductCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setup(value: ProductCellViewModel?) {
+    func setup(value: HistoryAccountViewModel?) {
         
         self.productLabel.text = value?.name
         self.qtdLabel.isHidden = true
@@ -59,16 +97,12 @@ class ProductCell: UITableViewCell {
     
     func setup(value: ProductList?) {
         
-        if let _value = value {
-            self.productLabel.text = _value.name
-            self.qtdLabel.text = String(_value.quantity)
-            self.priceLabel.text =  String(format: "R$ %.2f", _value.price)
-       
-            if _value.productType == ProductType.refeicao.rawValue {
-                self.productImageView.image = UIImage(named: "food")
-            }else{
-                self.productImageView.image = UIImage(named: "beer")
-            }
-        }
+        let vm: ProductViewModel = ProductViewModel(value: value)
+    
+        self.productLabel.text = vm.name
+        self.qtdLabel.text = String(vm.quantity)
+        self.priceLabel.text =  vm.price
+        self.productImageView.image = vm.productImageType
+    
     }
 }
